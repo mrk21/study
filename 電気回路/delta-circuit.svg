@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" width="440" height="300" font-family="-apple-system, system-ui, 'Segoe UI', sans-serif">
+  <style>
+    .wire { fill: none; stroke-width: 2.5; stroke-linecap: round; }
+    .thin { stroke-width: 1.2; }
+    text { font-size: 15px; font-weight: 600; }
+    .small { font-size: 13px; font-weight: 500; }
+    .neutral { stroke: #555; }
+    .ntext { fill: #333; }
+    .il  { stroke: #2563c7; } .iltext { fill: #2563c7; }
+    .ip  { stroke: #c7601e; } .iptext { fill: #c7601e; }
+    .dot { fill: #333; }
+    .zbox { fill: #ffffff; stroke: #555; stroke-width: 2; }
+    .ilfill { fill: #2563c7; }
+    .ipfill { fill: #c7601e; }
+    @media (prefers-color-scheme: dark) {
+      .neutral { stroke: #aaa; }
+      .ntext { fill: #ddd; }
+      .il  { stroke: #6ea8ff; } .iltext { fill: #6ea8ff; }
+      .ip  { stroke: #ff9d4d; } .iptext { fill: #ff9d4d; }
+      .dot { fill: #ddd; }
+      .zbox { fill: #1e1e1e; stroke: #aaa; }
+      .ilfill { fill: #6ea8ff; }
+      .ipfill { fill: #ff9d4d; }
+    }
+  </style>
+  <defs>
+    <marker id="ah-il" markerWidth="10" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" class="ilfill"/>
+    </marker>
+    <marker id="ah-ip" markerWidth="10" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" class="ipfill"/>
+    </marker>
+  </defs>
+
+  <!-- delta triangle edges (phase branches) -->
+  <line class="wire neutral" x1="200" y1="95" x2="100" y2="225"/>
+  <line class="wire neutral" x1="200" y1="95" x2="300" y2="225"/>
+  <line class="wire neutral" x1="100" y1="225" x2="300" y2="225"/>
+
+  <!-- impedance boxes on each edge -->
+  <g>
+    <rect class="zbox" x="-19" y="-8" width="38" height="16" transform="translate(150 160) rotate(127.65)"/>
+    <text class="ntext" x="150" y="160" text-anchor="middle" dominant-baseline="central">Z</text>
+  </g>
+  <g>
+    <rect class="zbox" x="-19" y="-8" width="38" height="16" transform="translate(250 160) rotate(52.43)"/>
+    <text class="ntext" x="250" y="160" text-anchor="middle" dominant-baseline="central">Z</text>
+  </g>
+  <g>
+    <rect class="zbox" x="-19" y="-8" width="38" height="16" transform="translate(200 225)"/>
+    <text class="ntext" x="200" y="225" text-anchor="middle" dominant-baseline="central">Z</text>
+  </g>
+
+  <!-- outgoing lines carrying line current I_l -->
+  <line class="wire il" x1="200" y1="95" x2="200" y2="38" marker-end="url(#ah-il)"/>
+  <line class="wire il" x1="100" y1="225" x2="42" y2="225" marker-end="url(#ah-il)"/>
+  <line class="wire il" x1="300" y1="225" x2="358" y2="225" marker-end="url(#ah-il)"/>
+
+  <!-- phase current arrow along right branch -->
+  <line class="wire ip thin" x1="292" y1="189" x2="238" y2="118" marker-end="url(#ah-ip)"/>
+
+  <!-- vertices -->
+  <circle class="dot" cx="200" cy="95" r="3.5"/>
+  <circle class="dot" cx="100" cy="225" r="3.5"/>
+  <circle class="dot" cx="300" cy="225" r="3.5"/>
+
+  <!-- terminal labels -->
+  <text class="ntext" x="200" y="26" text-anchor="middle">線1</text>
+  <text class="ntext" x="34" y="230" text-anchor="end">線2</text>
+  <text class="ntext" x="366" y="230" text-anchor="start">線3</text>
+
+  <!-- current labels -->
+  <text class="iltext" x="212" y="52" text-anchor="start">I<tspan dy="3" font-size="11">l</tspan><tspan dy="-3" font-size="15"> = &#8730;3&#183;I</tspan><tspan dy="3" font-size="11">p</tspan></text>
+  <text class="iltext small" x="70" y="252" text-anchor="middle">I<tspan dy="3" font-size="9">l</tspan></text>
+  <text class="iltext small" x="330" y="252" text-anchor="middle">I<tspan dy="3" font-size="9">l</tspan></text>
+  <text class="iptext" x="300" y="150" text-anchor="start">I<tspan dy="3" font-size="11">p</tspan><tspan dy="-3" font-size="15">（相電流）</tspan></text>
+</svg>

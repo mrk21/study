@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 680" width="840" height="680" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 14px; font-weight: 700; fill: #1b3a5c; }
+    .name { font-size: 12.5px; text-anchor: middle; }
+    .note { font-size: 16px; font-weight: 700; fill: #b4231a; }
+    .inner { font-size: 15px; font-weight: 700; fill: #222; text-anchor: middle; }
+    .foot { font-size: 12px; fill: #555; }
+    .sym { stroke: #222; stroke-width: 2.2; fill: #fff; }
+    .ring { stroke: #222; stroke-width: 1.8; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 1.5; fill: none; }
+    .arrow { stroke: #b4231a; stroke-width: 2.4; fill: none; }
+  </style>
+
+  <!-- background: fixed so the symbols stay readable in any theme -->
+  <rect width="840" height="680" rx="8" fill="#fff"/>
+
+  <text class="h" x="20" y="36">黒丸が基本。傍記がなければ片切スイッチ</text>
+  <g><circle cx="90" cy="74" r="10.5" fill="#222"/><text class="note" x="108" y="89"></text><text class="name" x="100" y="108">片切</text></g>
+  <g><circle cx="250" cy="74" r="10.5" fill="#222"/><text class="note" x="268" y="89">2P</text><text class="name" x="260" y="108">両切（2 極）</text></g>
+  <g><circle cx="410" cy="74" r="10.5" fill="#222"/><text class="note" x="428" y="89">3</text><text class="name" x="420" y="108">三路</text></g>
+  <g><circle cx="570" cy="74" r="10.5" fill="#222"/><text class="note" x="588" y="89">4</text><text class="name" x="580" y="108">四路</text></g>
+  <g><circle cx="730" cy="74" r="10.5" fill="#222"/><text class="note" x="748" y="89">H</text><text class="name" x="740" y="108">位置表示灯内蔵</text><text class="name" x="740" y="124">（ほたるスイッチ）</text></g>
+  <g><circle cx="90" cy="174" r="10.5" fill="#222"/><text class="note" x="108" y="189">L</text><text class="name" x="100" y="208">確認表示灯内蔵</text></g>
+  <g><circle cx="250" cy="174" r="10.5" fill="#222"/><text class="note" x="268" y="189">D</text><text class="name" x="260" y="208">遅延</text></g>
+  <g><circle cx="410" cy="174" r="10.5" fill="#222"/><text class="note" x="428" y="189">A</text><text class="name" x="420" y="208">自動点滅器</text></g>
+  <g><circle cx="570" cy="174" r="10.5" fill="#222"/><text class="note" x="588" y="189">RAS</text><text class="name" x="580" y="208">熱線式自動スイッチ</text></g>
+  <g><circle cx="734" cy="174" r="10.5" fill="#222"/><path class="arrow" d="M724,186 L753,159"/><path d="M758,154 L744,158 L754,168 Z" fill="#b4231a"/><text class="name" x="740" y="208">調光器</text></g>
+  <g><circle cx="90" cy="274" r="10.5" fill="#222"/><text class="note" x="108" y="289">R</text><text class="name" x="100" y="308">リモコンスイッチ</text></g>
+  <g><circle cx="250" cy="274" r="10.5" fill="#222"/><text class="note" x="268" y="289">P</text><text class="name" x="260" y="308">プルスイッチ</text></g>
+  <g><circle cx="410" cy="274" r="10.5" fill="#222"/><text class="note" x="428" y="289">WP</text><text class="name" x="420" y="308">防雨形</text></g>
+  <g><circle cx="570" cy="274" r="10.5" fill="#222"/><text class="note" x="588" y="289">T</text><text class="name" x="580" y="308">タイマ付</text></g>
+  <g><path d="M740,258 L752,274 L740,290 L728,274 Z" fill="#222"/><text class="name" x="740" y="308">ワイドハンドル形</text></g>
+  <text class="h" x="20" y="372">黒丸を丸で囲む。押しボタン、水位、圧力</text>
+  <g><circle class="ring" cx="90" cy="410" r="15"/><circle cx="90" cy="410" r="10.5" fill="#222"/><text class="note" x="108" y="425">B</text><text class="name" x="100" y="444">電磁開閉器用</text><text class="name" x="100" y="460">押しボタン</text></g>
+  <g><circle class="ring" cx="250" cy="410" r="15"/><circle cx="250" cy="410" r="10.5" fill="#222"/><text class="note" x="268" y="425">BL</text><text class="name" x="260" y="444">確認表示灯付</text><text class="name" x="260" y="460">電磁開閉器用押しボタン</text></g>
+  <g><circle class="ring" cx="410" cy="410" r="15"/><circle cx="410" cy="410" r="10.5" fill="#222"/><text class="note" x="428" y="425">F</text><text class="name" x="420" y="444">フロートスイッチ</text></g>
+  <g><circle class="ring" cx="570" cy="410" r="15"/><circle cx="570" cy="410" r="10.5" fill="#222"/><text class="note" x="588" y="425">LF3</text><text class="name" x="580" y="444">フロートレス</text><text class="name" x="580" y="460">スイッチ電極（3 は電極数）</text></g>
+  <g><circle class="ring" cx="730" cy="410" r="15"/><circle cx="730" cy="410" r="10.5" fill="#222"/><text class="note" x="748" y="425">P</text><text class="name" x="740" y="444">圧力スイッチ</text></g>
+  <text class="h" x="20" y="508">そのほか</text>
+  <g><circle class="sym" cx="100" cy="546" r="11"/><text class="name" x="100" y="580">確認表示灯</text><text class="name" x="100" y="596">（単体の白丸）</text></g>
+  <g><rect class="sym" x="241" y="532" width="38" height="28"/><text class="inner" x="260" y="552">TS</text><text class="name" x="260" y="580">タイムスイッチ</text></g>
+  <g><rect class="thin" x="412" y="525" width="16" height="42"/><path d="M412,525 L428,532 L412,539 Z" fill="#222"/><path d="M412,539 L428,546 L412,553 Z" fill="#222"/><path d="M412,553 L428,560 L412,567 Z" fill="#222"/><text class="name" x="420" y="580">リモコンリレー</text></g>
+  <g><circle class="sym" cx="572" cy="546" r="15"/><text class="inner" x="572" y="552">T</text><text class="note" x="591" y="563">R</text><text class="name" x="580" y="580">リモコントランス</text></g>
+  <g><circle class="sym" cx="740" cy="546" r="15"/><path class="thin" d="M725,546 H755 M729.4,535.4 L750.6,556.6 M729.4,556.6 L750.6,535.4"/><text class="name" x="740" y="580">リモコン</text><text class="name" x="740" y="596">セレクタスイッチ</text></g>
+
+  <text class="foot" x="20" y="648">過去問の図と動画のスライドをもとにした模式図。赤い文字が傍記で、スイッチの用途を表す。</text>
+  <text class="foot" x="20" y="668">リモコンリレーの三角の向きは、図面によって違う。</text>
+</svg>

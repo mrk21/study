@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .small { font-size: 12px; fill: #555; }
+    .mid { text-anchor: middle; }
+    .single { stroke: #222; stroke-width: 2.5; fill: none; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 1.5; fill: none; }
+    .jb { stroke: #7c8aa0; stroke-width: 1.5; stroke-dasharray: 6 4; fill: #f6f8fb; }
+    .black { stroke: #222; stroke-width: 3; fill: none; }
+    .red { stroke: #d6312b; stroke-width: 3; fill: none; }
+    .white-edge { stroke: #7c7c7c; stroke-width: 6; fill: none; }
+    .white-core { stroke: #fff; stroke-width: 3; fill: none; }
+    .neutral { fill: #0b62a4; }
+    .live { fill: #b4231a; }
+    .ret { fill: #0a6b41; }
+  </style>
+  <defs>
+    <clipPath id="jbclip"><circle r="16"/></clipPath>
+    <g id="box">
+      <circle r="16" fill="#fff"/>
+      <g clip-path="url(#jbclip)">
+        <path class="thin" d="M-30,18 L6,-18 M-20,18 L16,-18 M-10,18 L26,-18 M0,18 L36,-18"/>
+      </g>
+      <circle r="16" fill="none" stroke="#222" stroke-width="2"/>
+    </g>
+    <g id="outlet">
+      <circle class="sym" r="15"/>
+      <path d="M-13,7.5 A15,15 0 0 0 13,7.5 Z" fill="#222"/>
+      <path class="thin" d="M-4,-14.5 V7.5 M4,-14.5 V7.5"/>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the wire colors stay readable in any theme -->
+  <rect width="880" height="450" rx="8" fill="#fff"/>
+  <text class="h" x="20" y="26">単線図</text>
+  <text class="h" x="400" y="26">複線図</text>
+  <line x1="385" y1="12" x2="385" y2="420" stroke="#d5dbe3"/>
+
+  <!-- single-line diagram -->
+  <path class="single" d="M90,78 V214 M106,230 H224 M90,246 V360 M240,214 V100 M256,85 H310 M256,230 H320 M240,246 V356"/>
+  <text x="58" y="48">電源</text>
+  <text class="small" x="58" y="66">1φ2W 100 V</text>
+  <use href="#box" x="90" y="230"/>
+  <text class="b" x="66" y="258">A</text>
+  <use href="#box" x="240" y="230"/>
+  <text class="b" x="216" y="258">B</text>
+  <circle cx="90" cy="366" r="7" fill="#222"/>
+  <text x="104" y="371">ロ（スイッチ）</text>
+  <rect class="sym" x="224" y="70" width="32" height="30"/>
+  <text class="b mid" x="240" y="90">TS</text>
+  <text x="224" y="60">イ（タイムスイッチ）</text>
+  <rect class="sym" x="310" y="70" width="44" height="30"/>
+  <text class="mid" x="332" y="90">( )</text>
+  <text x="314" y="118">イ</text>
+  <circle class="sym" cx="338" cy="230" r="18"/>
+  <text class="b mid" x="338" y="235">R</text>
+  <text x="330" y="264">ロ</text>
+  <use href="#outlet" x="240" y="371"/>
+  <text x="262" y="376">コンセント</text>
+  <text class="small" x="98" y="150">VVF 2.0-2C</text>
+  <text class="small" x="98" y="306">VVF 1.6-2C</text>
+  <text class="small" x="124" y="222">VVF 1.6-3C</text>
+  <text class="small" x="248" y="150">VVF 1.6-2C</text>
+  <text class="small" x="252" y="306">VVF 1.6-2C</text>
+  <text class="small" x="260" y="222">1.6-2C</text>
+  <text class="small" x="258" y="78">1.6-2C</text>
+
+  <!-- multi-line diagram -->
+  <circle class="jb" cx="480" cy="215" r="58"/>
+  <circle class="jb" cx="670" cy="215" r="58"/>
+  <text class="small" x="510" y="292">A：リングスリーブ</text>
+  <text class="small" x="700" y="292">B：差込形コネクタ</text>
+
+  <!-- neutral (white) -->
+  <path class="white-edge" d="M500,44 V207 H786 M690,207 V78 M690,207 V350 M696,78 V110 H800 M500,350 V228"/>
+  <path class="white-core" d="M500,44 V207 H786 M690,207 V78 M690,207 V350 M696,78 V110 H800 M500,350 V228"/>
+  <!-- live (black) -->
+  <path class="black" d="M460,44 V350 M460,186 H650 M650,78 V350 M730,78 V90 H800 M670,228 H788"/>
+  <!-- return in the 3-core cable (red) -->
+  <path class="red" d="M500,228 H670"/>
+
+  <text x="444" y="40">黒</text>
+  <text x="508" y="40">白</text>
+  <text x="560" y="180">黒</text>
+  <text x="560" y="203">白</text>
+  <text x="560" y="247">赤</text>
+  <text x="444" y="340">黒</text>
+  <text x="508" y="340">白</text>
+  <text x="634" y="140">黒</text>
+  <text x="674" y="140">白</text>
+  <text x="634" y="316">黒</text>
+  <text x="698" y="316">白</text>
+  <text x="750" y="203">白</text>
+  <text x="750" y="247">黒</text>
+  <text x="760" y="84">黒</text>
+  <text x="760" y="128">白</text>
+
+  <!-- connection points -->
+  <circle class="live" cx="460" cy="186" r="5.5"/>
+  <circle class="neutral" cx="500" cy="207" r="5.5"/>
+  <circle class="ret" cx="500" cy="228" r="5.5"/>
+  <circle class="live" cx="650" cy="186" r="5.5"/>
+  <circle class="neutral" cx="690" cy="207" r="5.5"/>
+  <circle class="ret" cx="670" cy="228" r="5.5"/>
+
+  <!-- devices -->
+  <circle class="sym" cx="460" cy="356" r="5"/>
+  <circle class="sym" cx="500" cy="356" r="5"/>
+  <path d="M465,354 L492,342" stroke="#222" stroke-width="2.5" fill="none"/>
+  <text x="514" y="361">ロ（スイッチ）</text>
+
+  <rect class="sym" x="630" y="46" width="120" height="30"/>
+  <text class="mid" x="650" y="66">S1</text>
+  <text class="mid" x="693" y="66">S2</text>
+  <text class="mid" x="730" y="66">L1</text>
+  <text x="760" y="50">イ（TS）</text>
+
+  <rect class="sym" x="800" y="76" width="44" height="50"/>
+  <text class="mid" x="822" y="106">( )</text>
+  <text x="850" y="106">イ</text>
+  <text class="small" x="772" y="146">接地側端子に白</text>
+
+  <circle class="sym" cx="806" cy="215" r="19"/>
+  <text class="b mid" x="806" y="220">R</text>
+  <text x="832" y="220">ロ</text>
+  <text class="small" x="752" y="178">受金ねじ部の端子に白</text>
+
+  <circle class="sym" cx="670" cy="362" r="24"/>
+  <path d="M648,372 A24,24 0 0 0 692,372 Z" fill="#222"/>
+  <text class="b" x="698" y="372">W</text>
+  <text class="small" x="714" y="372">側の端子に白</text>
+
+  <text class="small mid" x="440" y="436">色つきの点が接続。点のない交差はつながっていない。白線は灰色の縁取りで表示。A と B の間は白、黒、帰り線の 3 本が要るので 3C。</text>
+</svg>

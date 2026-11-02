@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 275" width="830" height="275" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .small { font-size: 12px; fill: #555; }
+    .wire { stroke: #222; stroke-width: 2.5; fill: none; }
+    .white-edge { stroke: #7c7c7c; stroke-width: 6; fill: none; }
+    .white-core { stroke: #fff; stroke-width: 3; fill: none; }
+    .blade { stroke: #222; stroke-width: 3.5; fill: none; stroke-linecap: round; }
+    .flow { stroke: #f08c2e; stroke-width: 7; fill: none; stroke-linejoin: round; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .on { stroke: #222; stroke-width: 2; fill: #ffd84d; }
+  </style>
+  <defs>
+    <g id="base">
+      <path class="wire" d="M30,79 V50 H90 M130,30 H230 M130,70 H230 M270,50 H340 V79"/>
+      <path class="white-edge" d="M340,111 V150 H30 V111"/>
+      <path class="white-core" d="M340,111 V150 H30 V111"/>
+      <circle class="sym" cx="30" cy="95" r="16"/>
+      <text x="30" y="100" text-anchor="middle">~</text>
+      <circle cx="90" cy="50" r="4" fill="#222"/>
+      <circle cx="130" cy="30" r="4" fill="#222"/>
+      <circle cx="130" cy="70" r="4" fill="#222"/>
+      <circle cx="230" cy="30" r="4" fill="#222"/>
+      <circle cx="230" cy="70" r="4" fill="#222"/>
+      <circle cx="270" cy="50" r="4" fill="#222"/>
+      <text class="b" x="86" y="72" text-anchor="middle">0</text>
+      <text class="b" x="126" y="20" text-anchor="middle">1</text>
+      <text class="b" x="126" y="90" text-anchor="middle">3</text>
+      <text class="b" x="234" y="20" text-anchor="middle">1</text>
+      <text class="b" x="234" y="90" text-anchor="middle">3</text>
+      <text class="b" x="274" y="72" text-anchor="middle">0</text>
+      <text class="small" x="180" y="54" text-anchor="middle">渡り線</text>
+      <text class="b" x="108" y="116" text-anchor="middle">スイッチA</text>
+      <text class="b" x="252" y="116" text-anchor="middle">スイッチB</text>
+      <text class="small" x="34" y="42">非接地側</text>
+      <text class="small" x="185" y="170" text-anchor="middle">接地側</text>
+      <text x="362" y="100">照明</text>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the wire colors stay readable in any theme -->
+  <rect width="830" height="275" rx="8" fill="#fff"/>
+
+  <!-- both switches on the same traveler: lit -->
+  <text class="h" x="24" y="28">A = 1番、B = 1番 → 点灯</text>
+  <g transform="translate(14 40)">
+    <path class="flow" d="M30,79 V50 H90 L130,30 H230 L270,50 H340 V79 M340,111 V150 H30 V111"/>
+    <use href="#base"/>
+    <path class="blade" d="M90,50 L130,30 M270,50 L230,30"/>
+    <circle class="on" cx="340" cy="95" r="16"/>
+    <text class="small" x="195" y="205" text-anchor="middle">同じ渡り線を選んでいるので、電流が通る</text>
+  </g>
+
+  <line x1="415" y1="12" x2="415" y2="262" stroke="#d5dbe3"/>
+
+  <!-- switches on different travelers: off -->
+  <text class="h" x="430" y="28">A = 1番、B = 3番 → 消灯</text>
+  <g transform="translate(420 40)">
+    <use href="#base"/>
+    <path class="blade" d="M90,50 L130,30 M270,50 L230,70"/>
+    <circle class="sym" cx="340" cy="95" r="16"/>
+    <text class="small" x="195" y="205" text-anchor="middle">選んでいる渡り線が違うので、途中で途切れる</text>
+  </g>
+</svg>

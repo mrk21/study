@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 14px; font-weight: 700; fill: #1b3a5c; }
+    .small { font-size: 12px; fill: #555; }
+    .b { font-weight: 700; text-anchor: middle; }
+    .wire { stroke: #222; stroke-width: 2.5; fill: none; }
+    .live { stroke: #d9480f; stroke-width: 3; fill: none; }
+    .lead { stroke: #0b62a4; stroke-width: 2.5; fill: none; }
+    .sym { stroke: #222; stroke-width: 2.5; fill: #fff; }
+    .meter { fill: #f6f8fb; stroke: #222; stroke-width: 2.5; }
+    .terminal { fill: #fff; stroke: #222; stroke-width: 2; }
+    .ground { stroke: #222; stroke-width: 2.5; fill: none; }
+    .num { font-size: 12px; font-weight: 700; fill: #fff; text-anchor: middle; }
+    .off { fill: #b4231a; font-weight: 700; }
+    .divider { stroke: #d5dbe3; }
+  </style>
+  <defs>
+    <g id="n"><circle r="10" fill="#1b3a5c"/></g>
+  </defs>
+
+  <!-- background: fixed so the labels stay readable in any theme -->
+  <rect width="800" height="640" rx="8" fill="#fff"/>
+
+  <!-- line to earth -->
+  <text class="h" x="24" y="28">電路と大地の間：全部つないだ状態で測る</text>
+
+  <!-- source side and open main switch -->
+  <path class="wire" d="M24,70 H82 M24,130 H82"/>
+  <path class="wire" d="M82,70 L118,52 M82,130 L118,112"/>
+  <text class="small" x="26" y="58">電源側</text>
+  <circle class="sym" cx="130" cy="70" r="5"/>
+  <circle class="sym" cx="130" cy="130" r="5"/>
+
+  <!-- circuit under test, both wires tied together -->
+  <path class="live" d="M135,70 H620 M135,130 H270 V290 H620"/>
+  <path class="live" d="M135,70 C175,70 175,130 135,130"/>
+  <path class="live" d="M420,70 V92 M420,122 V161 M420,209 V290"/>
+  <path class="live" d="M420,96 V118"/>
+  <circle class="sym" cx="420" cy="94" r="4"/>
+  <circle class="sym" cx="420" cy="120" r="4"/>
+  <circle class="sym" cx="420" cy="185" r="24"/>
+  <path class="wire" d="M403,168 L437,202 M437,168 L403,202"/>
+  <path class="live" d="M620,70 V150 M620,220 V290"/>
+  <rect class="sym" x="584" y="150" width="72" height="70"/>
+  <text class="b" x="620" y="190">負荷</text>
+
+  <!-- meter -->
+  <rect class="meter" x="44" y="190" width="150" height="130" rx="6"/>
+  <text class="b" x="112" y="226">絶縁抵抗計</text>
+  <text class="b" x="112" y="244">（メガー）</text>
+  <rect class="terminal" x="172" y="262" width="26" height="22"/><text class="b" x="185" y="278">L</text>
+  <rect class="terminal" x="172" y="292" width="26" height="22"/><text class="b" x="185" y="308">E</text>
+  <path class="lead" d="M198,273 H270"/>
+  <circle cx="270" cy="273" r="4" fill="#0b62a4"/>
+  <path class="lead" d="M198,303 H226 V348"/>
+
+  <!-- earth -->
+  <path class="ground" d="M206,348 H246 M213,356 H239 M220,364 H232"/>
+
+  <!-- markers -->
+  <use href="#n" x="108" y="42"/><text class="num" x="108" y="46">1</text>
+  <text class="off" x="122" y="46">開閉器を切る</text>
+  <use href="#n" x="444" y="107"/><text class="num" x="444" y="111">2</text>
+  <text x="460" y="112">点滅器を入れる</text>
+  <use href="#n" x="672" y="185"/><text class="num" x="672" y="189">3</text>
+  <text x="688" y="190">使用状態</text>
+  <use href="#n" x="190" y="100"/><text class="num" x="190" y="104">4</text>
+  <text x="206" y="105">2 線をつなぐ</text>
+  <use href="#n" x="292" y="262"/><text class="num" x="292" y="266">5</text>
+  <text x="308" y="267">L は負荷側</text>
+  <use href="#n" x="252" y="330"/><text class="num" x="252" y="334">6</text>
+  <text x="268" y="335">E は接地極</text>
+  <text x="420" y="340">電路に流す電気が大地へ漏れていないかを調べる</text>
+
+  <line class="divider" x1="16" y1="384" x2="784" y2="384"/>
+
+  <!-- line to line -->
+  <text class="h" x="24" y="412">電線と電線の間：負荷を外して測る</text>
+  <path class="wire" d="M24,460 H82 M24,520 H82"/>
+  <path class="wire" d="M82,460 L118,442 M82,520 L118,502"/>
+  <text class="small" x="26" y="448">電源側</text>
+  <circle class="sym" cx="130" cy="460" r="5"/>
+  <circle class="sym" cx="130" cy="520" r="5"/>
+  <path class="wire" d="M135,460 H600 M135,520 H600"/>
+  <rect x="600" y="450" width="120" height="80" fill="none" stroke="#b4231a" stroke-width="2" stroke-dasharray="6 4"/>
+  <text class="b" x="660" y="486" style="fill:#b4231a">負荷は外す</text>
+  <text class="small" x="660" y="506" text-anchor="middle">（電球、機器など）</text>
+  <rect class="meter" x="250" y="552" width="170" height="70" rx="6"/>
+  <text class="b" x="325" y="592">絶縁抵抗計</text>
+  <rect class="terminal" x="406" y="556" width="26" height="22"/><text class="b" x="419" y="572">L</text>
+  <rect class="terminal" x="406" y="594" width="26" height="22"/><text class="b" x="419" y="610">E</text>
+  <path class="lead" d="M432,567 H480 V460"/>
+  <path class="lead" d="M432,605 H530 V520"/>
+  <circle cx="480" cy="460" r="4" fill="#0b62a4"/>
+  <circle cx="530" cy="520" r="4" fill="#0b62a4"/>
+  <text class="off" x="150" y="448">開閉器を切る</text>
+  <text x="560" y="582">点滅器は入れる</text>
+  <text x="560" y="602">L と E を 2 本の電線に 1 つずつ</text>
+</svg>

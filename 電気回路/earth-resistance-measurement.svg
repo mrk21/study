@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .b { font-weight: 700; text-anchor: middle; }
+    .h { font-size: 14px; font-weight: 700; fill: #1b3a5c; text-anchor: middle; }
+    .e { font-weight: 700; fill: #333; }
+    .p { font-weight: 700; fill: #0b62a4; }
+    .c { font-weight: 700; fill: #b4500f; }
+    .small { font-size: 12px; fill: #555; }
+    .wire-e { stroke: #222; stroke-width: 2.5; fill: none; }
+    .wire-p { stroke: #0b62a4; stroke-width: 2.5; fill: none; }
+    .wire-c { stroke: #b4500f; stroke-width: 2.5; fill: none; }
+    .terminal { fill: #fff; stroke: #222; stroke-width: 2; }
+    .flow { stroke: #b4500f; stroke-width: 2; stroke-dasharray: 6 4; fill: none; marker-end: url(#arrow); }
+    .dim { stroke: #666; stroke-width: 1.5; fill: none; marker-start: url(#s); marker-end: url(#e); }
+  </style>
+  <defs>
+    <marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,1 L8,5 L0,9" fill="none" stroke="#b4500f" stroke-width="2"/></marker>
+    <marker id="e" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#666" stroke-width="1.5"/></marker>
+    <marker id="s" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto"><path d="M9,1 L1,5 L9,9" fill="none" stroke="#666" stroke-width="1.5"/></marker>
+  </defs>
+
+  <!-- background: fixed so the labels stay readable in any theme -->
+  <rect width="800" height="380" rx="8" fill="#fff"/>
+
+  <!-- meter -->
+  <rect x="40" y="24" width="150" height="84" rx="6" fill="#f6f8fb" stroke="#222" stroke-width="2.5"/>
+  <text class="h" x="115" y="58">接地抵抗計</text>
+  <rect class="terminal" x="59" y="92" width="22" height="22"/><text class="b" x="70" y="108">E</text>
+  <rect class="terminal" x="104" y="92" width="22" height="22"/><text class="b" x="115" y="108">P</text>
+  <rect class="terminal" x="149" y="92" width="22" height="22"/><text class="b" x="160" y="108">C</text>
+
+  <!-- leads -->
+  <path class="wire-c" d="M160,114 V128 H630 V222"/>
+  <path class="wire-p" d="M115,114 V150 H390 V222"/>
+  <path class="wire-e" d="M70,114 V180 H150 V222"/>
+
+  <!-- earth -->
+  <rect x="24" y="222" width="752" height="74" fill="#efe6d6"/>
+  <line x1="24" y1="222" x2="776" y2="222" stroke="#8a6d3b" stroke-width="2.5"/>
+  <text x="40" y="270">大地</text>
+
+  <!-- electrodes -->
+  <rect x="145" y="212" width="10" height="66" fill="#6b7480"/>
+  <path d="M386,212 H394 V262 L390,274 L386,262 Z" fill="#0b62a4"/>
+  <path d="M626,212 H634 V262 L630,274 L626,262 Z" fill="#b4500f"/>
+  <text class="e" x="162" y="196">E</text><text class="small" x="176" y="196">被測定接地極</text>
+  <text class="p" x="400" y="196">P</text><text class="small" x="414" y="196">補助接地極（電圧用）</text>
+  <text class="c" x="640" y="196">C</text><text class="small" x="654" y="196">補助接地極（電流用）</text>
+
+  <!-- current through the earth -->
+  <path class="flow" d="M622,284 C480,292 300,292 160,284"/>
+  <text class="small" x="432" y="282">測定電流（交流）</text>
+
+  <!-- spacing -->
+  <line class="dim" x1="150" y1="322" x2="388" y2="322"/>
+  <line class="dim" x1="392" y1="322" x2="630" y2="322"/>
+  <text class="b" x="270" y="344">約 10 m</text>
+  <text class="b" x="510" y="344">約 10 m</text>
+  <text class="small" x="400" y="368" text-anchor="middle">E、P、C の順に、ほぼ一直線に並べる。E と C の間に電流を流し、E と P の間の電圧を測る</text>
+</svg>

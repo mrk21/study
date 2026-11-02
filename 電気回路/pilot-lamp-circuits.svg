@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 370" width="880" height="370" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .key { font-weight: 700; fill: #b4231a; }
+    .small { font-size: 12px; fill: #555; }
+    .mid { text-anchor: middle; }
+    .wire { stroke: #222; stroke-width: 2.5; fill: none; }
+    .pilot { stroke: #b4231a; stroke-width: 2.5; fill: none; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .lamp { stroke: #b4231a; stroke-width: 2.5; fill: #fff3c4; }
+    .rule { stroke: #d5dbe3; }
+  </style>
+  <defs>
+    <g id="base">
+      <text class="b" x="10" y="95">L</text>
+      <text class="b" x="10" y="225">N</text>
+      <path class="wire" d="M26,90 H92 M148,90 H230 V137 M230,173 V220 H26"/>
+      <circle class="sym" cx="97" cy="90" r="5"/>
+      <circle class="sym" cx="143" cy="90" r="5"/>
+      <path class="wire" d="M101,87 L138,70"/>
+      <text class="small mid" x="120" y="112">スイッチ</text>
+      <circle class="sym" cx="230" cy="155" r="18"/>
+      <text class="b mid" x="230" y="160">R</text>
+      <text class="small mid" x="230" y="190" dy="-4" dx="30">負荷</text>
+    </g>
+    <circle id="dot" r="4.5" fill="#b4231a"/>
+  </defs>
+
+  <!-- background: fixed so the wire colors stay readable in any theme -->
+  <rect width="880" height="370" rx="8" fill="#fff"/>
+  <line class="rule" x1="293" y1="12" x2="293" y2="310"/>
+  <line class="rule" x1="587" y1="12" x2="587" y2="310"/>
+
+  <!-- always on -->
+  <g transform="translate(8 0)">
+    <text class="h" x="10" y="28">常時点灯</text>
+    <use href="#base"/>
+    <path class="pilot" d="M62,90 V143 M62,167 V220"/>
+    <circle class="lamp" cx="62" cy="155" r="12"/>
+    <use href="#dot" x="62" y="90"/>
+    <use href="#dot" x="62" y="220"/>
+    <text x="10" y="252"><tspan class="key">L と N の間</tspan>につなぐ</text>
+    <text x="10" y="274">ON：点灯　OFF：点灯</text>
+    <text class="small" x="10" y="296">動画の一覧に対応するスイッチはない</text>
+  </g>
+
+  <!-- on together -->
+  <g transform="translate(302 0)">
+    <text class="h" x="10" y="28">同時点滅</text>
+    <use href="#base"/>
+    <path class="pilot" d="M185,90 V143 M185,167 V220"/>
+    <circle class="lamp" cx="185" cy="155" r="12"/>
+    <use href="#dot" x="185" y="90"/>
+    <use href="#dot" x="185" y="220"/>
+    <text x="10" y="252"><tspan class="key">負荷と並列</tspan>につなぐ</text>
+    <text x="10" y="274">ON：点灯　OFF：消灯</text>
+    <text class="small" x="10" y="296">内蔵スイッチは確認表示灯（傍記 L）</text>
+  </g>
+
+  <!-- on when the switch is off -->
+  <g transform="translate(596 0)">
+    <text class="h" x="10" y="28">異時点滅</text>
+    <use href="#base"/>
+    <path class="pilot" d="M74,90 V50 H108 M132,50 H166 V90"/>
+    <circle class="lamp" cx="120" cy="50" r="12"/>
+    <use href="#dot" x="74" y="90"/>
+    <use href="#dot" x="166" y="90"/>
+    <text x="10" y="252"><tspan class="key">スイッチと並列</tspan>につなぐ</text>
+    <text x="10" y="274">ON：消灯　OFF：点灯</text>
+    <text class="small" x="10" y="296">内蔵スイッチは位置表示灯（傍記 H）</text>
+  </g>
+
+  <text class="small" x="18" y="334">赤い線と丸が表示灯。異時点滅の OFF では、表示灯と負荷が直列になる。表示灯の内部抵抗がとても大きいので、</text>
+  <text class="small" x="18" y="354">電圧はほとんど表示灯にかかり、負荷は動かない。ON では、スイッチが表示灯の両端を短絡するので表示灯は消える。</text>
+</svg>

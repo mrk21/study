@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .key { font-weight: 700; fill: #b4231a; }
+    .small { font-size: 12px; fill: #555; }
+    .tag { font-size: 11px; fill: #333; text-anchor: middle; }
+    .mid { text-anchor: middle; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 1.8; fill: none; }
+    .dash { stroke: #222; stroke-width: 1.8; stroke-dasharray: 4 3; fill: none; }
+    .jb { stroke: #7c8aa0; stroke-width: 1.5; stroke-dasharray: 6 4; fill: #f6f8fb; }
+    .black { stroke: #222; stroke-width: 3; fill: none; }
+    .red { stroke: #d6312b; stroke-width: 3; fill: none; }
+    .white-edge { stroke: #7c7c7c; stroke-width: 6; fill: none; }
+    .white-core { stroke: #fff; stroke-width: 3; fill: none; }
+    .neutral { fill: #0b62a4; }
+    .live { fill: #b4231a; }
+    .ret { fill: #0a6b41; }
+    .link { fill: #7a3fa0; }
+    .rule { stroke: #d5dbe3; }
+  </style>
+  <defs>
+    <g id="boxes">
+      <circle class="jb" cx="130" cy="190" r="62"/>
+      <circle class="jb" cx="320" cy="190" r="62"/>
+      <text class="small" x="62" y="256">A</text>
+      <text class="small" x="384" y="256">B</text>
+    </g>
+    <g id="labels">
+      <text class="b" x="12" y="155">N</text>
+      <text class="b" x="12" y="195">L</text>
+    </g>
+    <g id="neutral-wires">
+      <path class="white-edge" d="M28,150 H312 V80 M122,150 V80"/>
+      <path class="white-core" d="M28,150 H312 V80 M122,150 V80"/>
+    </g>
+    <g id="link-wires">
+      <path class="red" d="M146,299 V210 H304 V299"/>
+      <path class="white-edge" d="M168,333 V230 H282 V333"/>
+      <path class="white-core" d="M168,333 V230 H282 V333"/>
+    </g>
+    <g id="devices">
+      <circle class="sym" cx="130" cy="62" r="18"/>
+      <text class="b mid" x="130" y="67">R</text>
+      <circle class="sym" cx="320" cy="62" r="18"/>
+      <text class="b mid" x="320" y="67">R</text>
+      <text x="154" y="67">イ</text>
+      <text x="344" y="67">イ</text>
+
+      <!-- three-way switch near the source: 0 on the left -->
+      <path class="thin" d="M94,322 H116"/>
+      <path class="dash" d="M116,322 L142,306"/>
+      <path class="thin" d="M116,322 L163,337"/>
+      <circle class="sym" cx="94" cy="322" r="5"/>
+      <circle class="sym" cx="146" cy="304" r="5"/>
+      <circle class="sym" cx="168" cy="338" r="5"/>
+      <text class="small" x="78" y="326">0</text>
+      <text class="small" x="153" y="306">3</text>
+      <text class="small" x="175" y="343">1</text>
+
+      <!-- three-way switch far from the source: 0 on the right -->
+      <path class="thin" d="M356,322 H334"/>
+      <path class="dash" d="M334,322 L308,306"/>
+      <path class="thin" d="M334,322 L287,337"/>
+      <circle class="sym" cx="356" cy="322" r="5"/>
+      <circle class="sym" cx="304" cy="304" r="5"/>
+      <circle class="sym" cx="282" cy="338" r="5"/>
+      <text class="small" x="365" y="326">0</text>
+      <text class="small" x="290" y="302">3</text>
+      <text class="small" x="268" y="343">1</text>
+
+      <text class="small mid" x="130" y="370">三路スイッチ イ</text>
+      <text class="small mid" x="320" y="370">三路スイッチ イ</text>
+    </g>
+    <g id="dots-common">
+      <circle class="neutral" cx="122" cy="150" r="5"/>
+      <circle class="neutral" cx="312" cy="150" r="5"/>
+      <circle class="ret" cx="138" cy="170" r="5"/>
+      <circle class="ret" cx="328" cy="170" r="5"/>
+      <circle class="link" cx="146" cy="210" r="5"/>
+      <circle class="link" cx="304" cy="210" r="5"/>
+      <circle class="link" cx="168" cy="230" r="5"/>
+      <circle class="link" cx="282" cy="230" r="5"/>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the wire colors stay readable in any theme -->
+  <rect width="880" height="440" rx="8" fill="#fff"/>
+  <line class="rule" x1="440" y1="12" x2="440" y2="384"/>
+
+  <!-- pattern 1 -->
+  <g transform="translate(8 0)">
+    <text class="h" x="12" y="24">パターン 1：電源に近い三路スイッチを L 側へ</text>
+    <use href="#boxes"/>
+    <use href="#labels"/>
+    <use href="#neutral-wires"/>
+    <use href="#link-wires"/>
+    <path class="black" d="M28,190 H94 V317"/>
+    <path class="black" d="M138,80 V170 H356 V317 M328,80 V170"/>
+    <use href="#devices"/>
+    <use href="#dots-common"/>
+    <circle class="live" cx="94" cy="190" r="5"/>
+    <text class="tag" x="225" y="146">N</text>
+    <text class="tag" x="225" y="166">帰り線</text>
+    <text class="tag" x="225" y="206">渡り線</text>
+    <text class="tag" x="225" y="226">渡り線</text>
+    <text class="key mid" x="225" y="280">A と B の間は 4 本</text>
+  </g>
+
+  <!-- pattern 2 -->
+  <g transform="translate(448 0)">
+    <text class="h" x="12" y="24">パターン 2：電源から遠い三路スイッチを L 側へ</text>
+    <use href="#boxes"/>
+    <use href="#labels"/>
+    <use href="#neutral-wires"/>
+    <use href="#link-wires"/>
+    <path class="black" d="M28,190 H356 V317"/>
+    <path class="black" d="M94,317 V170 H328 V80 M138,80 V170"/>
+    <use href="#devices"/>
+    <use href="#dots-common"/>
+    <circle class="live" cx="356" cy="190" r="5"/>
+    <text class="tag" x="225" y="146">N</text>
+    <text class="tag" x="225" y="166">帰り線</text>
+    <text class="tag" x="225" y="186">L</text>
+    <text class="tag" x="225" y="206">渡り線</text>
+    <text class="tag" x="225" y="226">渡り線</text>
+    <text class="key mid" x="225" y="280">A と B の間は 5 本</text>
+  </g>
+
+  <text class="small" x="20" y="408">色つきの点が接続。点のない交差はつながっていない。白線は灰色の縁取りで表示。どちらも同じように動くが、線が少ないパターン 1 を選ぶ。</text>
+  <text class="small" x="20" y="428">動画のスライドの図から描いたもの。太さやケーブルの種類は省略した。</text>
+</svg>

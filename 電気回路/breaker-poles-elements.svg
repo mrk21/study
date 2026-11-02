@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .title { font-weight: 600; text-anchor: middle; }
+    .type { font-size: 15px; font-weight: 700; fill: #1b3a5c; text-anchor: middle; }
+    .line-name { font-weight: 700; text-anchor: middle; }
+    .small { font-size: 12px; fill: #555; text-anchor: middle; }
+    .ok { font-size: 15px; font-weight: 700; fill: #0a6b41; text-anchor: middle; }
+    .ng { font-size: 15px; font-weight: 700; fill: #b4231a; text-anchor: middle; }
+    .wire { stroke: #222; stroke-width: 3; fill: none; }
+    .box { stroke: #7c8aa0; stroke-width: 1.5; fill: #f6f8fb; }
+    .load { stroke: #222; stroke-width: 2; fill: #fff; }
+    .element { stroke: #a84a0c; stroke-width: 1.5; fill: #f08c2e; }
+    .divider { stroke: #d5dbe3; }
+  </style>
+  <defs>
+    <g id="circuit">
+      <rect class="box" x="-65" y="104" width="130" height="92" rx="4"/>
+      <text class="small" x="0" y="121">ブレーカー</text>
+      <path class="wire" d="M-35,86 V222 M35,86 V222"/>
+      <rect class="load" x="-55" y="222" width="110" height="28"/>
+      <text x="0" y="241" text-anchor="middle">負荷</text>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the labels stay readable in any theme -->
+  <rect width="800" height="350" rx="8" fill="#fff"/>
+  <path class="divider" d="M205,12 V312 M395,12 V312 M585,12 V312"/>
+
+  <!-- 100 V with 2P1E -->
+  <g transform="translate(110 0)">
+    <text class="title" x="0" y="26">単相 2 線・3 線 100 V</text>
+    <text class="type" x="0" y="46">2P1E</text>
+    <text class="line-name" x="-35" y="66">L</text><text class="small" x="-35" y="80">対地 100 V</text>
+    <text class="line-name" x="35" y="66">N</text><text class="small" x="35" y="80">対地 0 V</text>
+    <use href="#circuit"/>
+    <rect class="element" x="-45" y="136" width="20" height="36"/>
+    <text class="ok" x="0" y="278">○ OK</text>
+    <text class="small" x="0" y="298">L 側の素子で検出できる</text>
+  </g>
+
+  <!-- 100 V with 2P2E -->
+  <g transform="translate(300 0)">
+    <text class="title" x="0" y="26">単相 2 線・3 線 100 V</text>
+    <text class="type" x="0" y="46">2P2E</text>
+    <text class="line-name" x="-35" y="66">L</text><text class="small" x="-35" y="80">対地 100 V</text>
+    <text class="line-name" x="35" y="66">N</text><text class="small" x="35" y="80">対地 0 V</text>
+    <use href="#circuit"/>
+    <rect class="element" x="-45" y="136" width="20" height="36"/>
+    <rect class="element" x="25" y="136" width="20" height="36"/>
+    <text class="ok" x="0" y="278">○ OK</text>
+    <text class="small" x="0" y="298">両極に素子がある</text>
+  </g>
+
+  <!-- 200 V with 2P2E -->
+  <g transform="translate(490 0)">
+    <text class="title" x="0" y="26">単相 3 線式 200 V</text>
+    <text class="type" x="0" y="46">2P2E</text>
+    <text class="line-name" x="-35" y="66">L1</text><text class="small" x="-35" y="80">対地 100 V</text>
+    <text class="line-name" x="35" y="66">L2</text><text class="small" x="35" y="80">対地 100 V</text>
+    <use href="#circuit"/>
+    <rect class="element" x="-45" y="136" width="20" height="36"/>
+    <rect class="element" x="25" y="136" width="20" height="36"/>
+    <text class="ok" x="0" y="278">○ OK</text>
+    <text class="small" x="0" y="298">どちらの線の異常も検出できる</text>
+  </g>
+
+  <!-- 200 V with 2P1E -->
+  <g transform="translate(690 0)">
+    <text class="title" x="0" y="26">単相 3 線式 200 V</text>
+    <text class="type" x="0" y="46">2P1E</text>
+    <text class="line-name" x="-35" y="66">L1</text><text class="small" x="-35" y="80">対地 100 V</text>
+    <text class="line-name" x="35" y="66">L2</text><text class="small" x="35" y="80">対地 100 V</text>
+    <use href="#circuit"/>
+    <rect class="element" x="-45" y="136" width="20" height="36"/>
+    <text class="ng" x="0" y="278">× NG</text>
+    <text class="small" x="0" y="298">L2 側に素子がない</text>
+  </g>
+
+  <!-- legend -->
+  <rect class="element" x="238" y="322" width="14" height="18"/>
+  <text x="260" y="336">素子（過電流を検出する部分）。縦の線はどちらも極として開閉される</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 250" width="780" height="250" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .name { font-size: 14px; font-weight: 700; fill: #1b3a5c; text-anchor: middle; }
+    .sub { font-size: 12px; fill: #555; text-anchor: middle; }
+    .foot { font-size: 12px; fill: #555; }
+    .sym { stroke: #222; stroke-width: 2.5; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <g id="plain">
+      <circle class="sym" r="24"/>
+      <path class="thin" d="M-8,-22.6 V22.6 M8,-22.6 V22.6"/>
+    </g>
+    <g id="wall">
+      <circle class="sym" r="24"/>
+      <path d="M-20.78,12 A24,24 0 0 0 20.78,12 Z" fill="#222"/>
+      <path class="thin" d="M-8,-22.6 V12 M8,-22.6 V12"/>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the symbols stay readable in any theme -->
+  <rect width="780" height="250" rx="8" fill="#fff"/>
+
+  <!-- wall -->
+  <use href="#wall" x="86" y="74"/>
+  <text class="name" x="86" y="138">壁付</text>
+  <text class="sub" x="86" y="158">黒い部分が壁側</text>
+
+  <!-- ceiling -->
+  <use href="#plain" x="238" y="74"/>
+  <text class="name" x="238" y="138">天井付</text>
+  <text class="sub" x="238" y="158">黒い部分がない</text>
+
+  <!-- floor -->
+  <use href="#plain" x="390" y="66"/>
+  <path d="M390,90 L380,106 H400 Z" fill="#222"/>
+  <text class="name" x="390" y="138">床付</text>
+  <text class="sub" x="390" y="158">下に黒い三角</text>
+
+  <!-- raised floor -->
+  <rect class="sym" x="510" y="40" width="64" height="70"/>
+  <use href="#plain" x="542" y="66"/>
+  <line class="thin" x1="510" y1="94" x2="574" y2="94"/>
+  <text class="name" x="542" y="138">二重床用</text>
+  <text class="sub" x="542" y="158">四角で囲み、下に帯</text>
+
+  <!-- emergency -->
+  <rect class="sym" x="648" y="42" width="92" height="64"/>
+  <use href="#plain" x="694" y="74"/>
+  <text class="name" x="694" y="138">非常用</text>
+  <text class="sub" x="694" y="158">横長の四角で囲む</text>
+
+  <text class="foot" x="24" y="200">傍記は丸の右や下に書く。壁付と天井付は令和 6 年度上期の問 32 など、過去問の図で確認した。</text>
+  <text class="foot" x="24" y="222">床付、二重床用、非常用は動画のスライドから描いたもので、ほかの資料とは照合していない。</text>
+</svg>

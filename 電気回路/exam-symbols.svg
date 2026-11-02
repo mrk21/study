@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" width="780" height="300" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 12px; font-weight: 500; fill: #333; text-anchor: middle; }
+    .h { font-size: 14px; font-weight: 700; fill: #1b3a5c; text-anchor: start; }
+    .in { font-size: 15px; font-weight: 500; }
+    .bold { font-size: 14px; font-weight: 700; }
+    .sym { stroke: #222; stroke-width: 2.5; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 2.5; fill: none; }
+    .dash { stroke: #222; stroke-width: 2; fill: #fff; stroke-dasharray: 5 3; }
+  </style>
+  <defs>
+    <g id="o"><circle class="sym" r="13"/><path d="M-6.5,-11.26 A13,13 0 0 0 -6.5,11.26 Z" fill="#222"/><path class="thin" stroke-width="1.5" d="M-6.5,-4 H12.4 M-6.5,4 H12.4"/></g>
+  </defs>
+
+  <!-- background: fixed so the symbols stay readable in any theme -->
+  <rect width="780" height="300" rx="8" fill="#fff"/>
+
+  <text class="h" x="24" y="28">照明</text>
+  <g transform="translate(90 72)"><circle class="sym" r="20"/><line class="thin" x1="-20" y1="0" x2="20" y2="0"/></g>
+  <text x="90" y="112">ペンダント</text>
+  <g transform="translate(220 72)"><circle class="sym" r="20"/><path class="thin" d="M-5,-10 A14,14 0 0 0 -5,10 M5,-10 A14,14 0 0 1 5,10"/></g>
+  <text x="220" y="112">引掛シーリング（丸）</text>
+  <g transform="translate(350 72)"><circle class="sym" r="20"/><text class="in" y="5">CL</text></g>
+  <text x="350" y="112">シーリング（天井直付）</text>
+  <g transform="translate(480 72)"><circle class="sym" r="20"/><text class="in" y="5">CH</text></g>
+  <text x="480" y="112">シャンデリア</text>
+  <g transform="translate(610 72)"><circle class="sym" r="20"/><text class="in" y="5">DL</text></g>
+  <text x="610" y="112">埋込器具</text>
+
+  <line x1="20" y1="132" x2="760" y2="132" stroke="#d5dbe3"/>
+
+  <text class="h" x="24" y="158">スイッチとコンセント、そのほか</text>
+  <g transform="translate(90 204)"><circle r="8" fill="#222"/><path class="thin" d="M-16,16 L18,-18 M6,-18 H18 V-6"/></g>
+  <text x="90" y="244">調光器</text>
+  <g transform="translate(205 204)"><use href="#o"/><text class="bold" x="32" y="-3">EET</text><text class="bold" x="26" y="13">EL</text></g>
+  <text x="220" y="244">接地極付接地端子付</text>
+  <text x="220" y="260">漏電遮断器付</text>
+  <g transform="translate(335 204)"><use href="#o"/><text class="bold" x="30" y="-3">2E</text><text class="bold" x="32" y="13">WP</text></g>
+  <text x="350" y="244">2 口、接地極付、防雨形</text>
+  <g transform="translate(462 204)"><use href="#o"/><text class="bold" x="34" y="5">LK</text></g>
+  <text x="480" y="244">抜け止め形</text>
+  <g transform="translate(610 204)"><rect class="sym" x="-26" y="-14" width="34" height="26"/><text class="in" x="-9" y="4">RC</text><text class="bold" x="20" y="4">I</text></g>
+  <text x="610" y="236">ルームエアコン屋内ユニット</text>
+  <text x="610" y="252">（屋外ユニットは O）</text>
+  <text x="390" y="286">過去問の図と選択肢をもとに描いた模式図</text>
+</svg>

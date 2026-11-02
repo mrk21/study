@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 545" width="780" height="545" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .t { font-size: 14px; font-weight: 700; fill: #222; }
+    .cap { font-size: 12px; text-anchor: middle; }
+    .sub { font-size: 12px; text-anchor: middle; fill: #666; }
+    .line { stroke: #222; stroke-width: 2.5; fill: none; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 1.5; fill: none; }
+    .rule { stroke: #d5dbe3; stroke-width: 1; }
+  </style>
+  <defs>
+    <g id="outlet">
+      <circle class="sym" r="13"/>
+      <path d="M-6.5,-11.26 A13,13 0 0 0 -6.5,11.26 Z" fill="#222"/>
+      <path class="thin" d="M-6.5,-4 H12.4 M-6.5,4 H12.4"/>
+    </g>
+    <clipPath id="cjb-clip"><circle r="13"/></clipPath>
+    <g id="cable-jb">
+      <circle r="13" fill="#fff"/>
+      <g clip-path="url(#cjb-clip)">
+        <path class="thin" d="M-28,16 L4,-16 M-20,16 L12,-16 M-12,16 L20,-16 M-4,16 L28,-16"/>
+      </g>
+      <circle r="13" fill="none" stroke="#222" stroke-width="2"/>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the symbols stay readable in any theme -->
+  <rect width="780" height="545" rx="8" fill="#fff"/>
+
+  <!-- wiring lines -->
+  <text class="h" x="24" y="28">線の種類（施工場所）</text>
+  <line class="line" x1="46" y1="54" x2="186" y2="54"/>
+  <line class="line" x1="230" y1="54" x2="370" y2="54" stroke-dasharray="24 8"/>
+  <line class="line" x1="414" y1="54" x2="554" y2="54" stroke-dasharray="8 6"/>
+  <line class="line" x1="598" y1="54" x2="738" y2="54" stroke-dasharray="24 6 3 6"/>
+  <text class="cap" x="116" y="78">天井隠ぺい配線</text><text class="sub" x="116" y="94">実線</text>
+  <text class="cap" x="300" y="78">床隠ぺい配線</text><text class="sub" x="300" y="94">破線（長め）</text>
+  <text class="cap" x="484" y="78">露出配線</text><text class="sub" x="484" y="94">点線（短い破線）</text>
+  <text class="cap" x="668" y="78">地中埋設配線</text><text class="sub" x="668" y="94">一点鎖線</text>
+  <line class="rule" x1="24" y1="108" x2="756" y2="108"/>
+
+  <!-- switches -->
+  <text class="h" x="24" y="134">スイッチ（基本は黒丸）</text>
+  <circle cx="70" cy="162" r="7" fill="#222"/>
+  <circle cx="154" cy="162" r="7" fill="#222"/><text class="t" x="165" y="167">3</text>
+  <circle cx="246" cy="162" r="7" fill="#222"/><text class="t" x="257" y="167">4</text>
+  <circle cx="334" cy="162" r="7" fill="#222"/><text class="t" x="345" y="167">2P</text>
+  <circle cx="430" cy="162" r="7" fill="#222"/><text class="t" x="441" y="167">H</text>
+  <circle cx="522" cy="162" r="7" fill="#222"/><text class="t" x="533" y="167">L</text>
+  <circle cx="614" cy="162" r="7" fill="#222"/><text class="t" x="625" y="167">A</text>
+  <circle cx="702" cy="162" r="7" fill="#222"/><text class="t" x="713" y="167">WP</text>
+  <text class="cap" x="70" y="190">片切</text>
+  <text class="cap" x="162" y="190">三路</text>
+  <text class="cap" x="254" y="190">四路</text>
+  <text class="cap" x="346" y="190">2極</text>
+  <text class="cap" x="438" y="190">位置表示灯付</text>
+  <text class="cap" x="530" y="190">確認表示灯付</text>
+  <text class="cap" x="622" y="190">自動点滅器</text>
+  <text class="cap" x="714" y="190">防雨形</text>
+  <line class="rule" x1="24" y1="204" x2="756" y2="204"/>
+
+  <!-- outlets -->
+  <text class="h" x="24" y="230">コンセント（基本は丸に2本線）</text>
+  <use href="#outlet" x="70" y="260"/>
+  <use href="#outlet" x="154" y="260"/><text class="t" x="172" y="265">2</text>
+  <use href="#outlet" x="246" y="260"/><text class="t" x="264" y="265">E</text>
+  <use href="#outlet" x="334" y="260"/><text class="t" x="352" y="265">ET</text>
+  <use href="#outlet" x="426" y="260"/><text class="t" x="444" y="265">LK</text>
+  <use href="#outlet" x="522" y="260"/><text class="t" x="540" y="265">T</text>
+  <use href="#outlet" x="606" y="260"/><text class="t" x="624" y="265">WP</text>
+  <use href="#outlet" x="698" y="260"/><text class="t" x="716" y="265">20A</text>
+  <text class="cap" x="70" y="292">標準</text>
+  <text class="cap" x="162" y="292">2口</text>
+  <text class="cap" x="254" y="292">接地極付</text>
+  <text class="cap" x="346" y="292">接地端子付</text>
+  <text class="cap" x="438" y="292">抜け止め形</text>
+  <text class="cap" x="530" y="292">引掛形</text>
+  <text class="cap" x="622" y="292">防雨形</text>
+  <text class="cap" x="714" y="292">20 A</text>
+  <line class="rule" x1="24" y1="306" x2="756" y2="306"/>
+
+  <!-- lighting -->
+  <text class="h" x="24" y="332">照明</text>
+  <circle class="sym" cx="116" cy="362" r="14"/>
+  <g transform="translate(300 362)"><circle class="sym" r="14"/><path d="M0,-14 A14,14 0 0 0 0,14 Z" fill="#222"/></g>
+  <g transform="translate(484 362)"><rect class="sym" x="-30" y="-8" width="60" height="16"/><circle class="sym" r="14"/></g>
+  <g transform="translate(668 362)"><rect class="sym" x="-30" y="-8" width="60" height="16"/><circle class="sym" r="14"/><path d="M-12.1,-7 A14,14 0 0 1 12.1,-7 Z" fill="#222"/></g>
+  <text class="cap" x="116" y="392">白熱灯など（天井付）</text>
+  <text class="cap" x="300" y="392">白熱灯など（壁付）</text>
+  <text class="cap" x="484" y="392">蛍光灯（天井付）</text>
+  <text class="cap" x="668" y="392">蛍光灯（壁付）</text>
+  <line class="rule" x1="24" y1="406" x2="756" y2="406"/>
+
+  <!-- panels, boxes, earth -->
+  <text class="h" x="24" y="432">盤・ボックス・接地</text>
+  <g transform="translate(97 464)"><rect class="sym" x="-24" y="-12" width="48" height="24"/><path d="M-24,12 L24,-12 V12 Z" fill="#222"/></g>
+  <g transform="translate(244 464)"><rect class="sym" x="-24" y="-12" width="48" height="24"/><path class="thin" d="M-24,-12 L24,12 M-24,12 L24,-12"/></g>
+  <rect class="sym" x="384" y="457" width="14" height="14"/>
+  <use href="#cable-jb" x="538" y="464"/>
+  <path class="thin" stroke-width="2" d="M685,448 V466 M672,466 H698 M677,472 H693 M682,478 H688"/>
+  <text class="cap" x="97" y="496">分電盤</text>
+  <text class="cap" x="244" y="496">配電盤</text>
+  <text class="cap" x="391" y="496">ジョイントボックス</text>
+  <text class="cap" x="538" y="496">ケーブル用ジョイントボックス</text>
+  <text class="cap" x="685" y="496">接地極</text>
+
+  <text class="sub" x="390" y="528">コンセントと壁付照明の黒く塗った側が壁側</text>
+</svg>

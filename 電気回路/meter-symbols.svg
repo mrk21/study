@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 410" width="780" height="410" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 14px; font-weight: 700; fill: #1b3a5c; }
+    .name { font-size: 14px; font-weight: 700; text-anchor: middle; }
+    .circuit { font-size: 14px; font-weight: 700; fill: #b4500f; text-anchor: middle; }
+    .note { font-size: 12px; fill: #555; text-anchor: middle; }
+    .card { fill: #f6f8fb; stroke: #d5dbe3; }
+    .sym { stroke: #222; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .thin { stroke: #222; stroke-width: 2; fill: none; stroke-linejoin: round; }
+    .solid { fill: #222; }
+    .end { fill: #fff; stroke: #222; stroke-width: 2; }
+  </style>
+  <defs>
+    <g id="coil">
+      <path class="sym" d="M-26,34 V-8 A26,26 0 0 1 26,-8 V34"/>
+      <rect class="solid" x="-16" y="28" width="32" height="6"/>
+    </g>
+    <g id="horizontal"><path class="sym" d="M-26,24 V-22 H26 V24"/></g>
+    <g id="vertical"><path class="sym" d="M0,-24 V22 M-26,24 H26"/></g>
+  </defs>
+
+  <!-- background: fixed so the symbols stay readable in any theme -->
+  <rect width="780" height="410" rx="8" fill="#fff"/>
+
+  <!-- operating principle -->
+  <text class="h" x="24" y="28">動作原理を表す記号</text>
+
+  <rect class="card" x="24" y="40" width="236" height="170" rx="6"/>
+  <text class="name" x="142" y="62">可動コイル形</text>
+  <use href="#coil" x="142" y="122"/>
+  <text class="circuit" x="142" y="186">直流回路</text>
+  <text class="note" x="142" y="202">U 字型の磁石の形</text>
+
+  <rect class="card" x="272" y="40" width="236" height="170" rx="6"/>
+  <text class="name" x="390" y="62">可動鉄片形</text>
+  <g transform="translate(386 122)">
+    <path class="thin" d="M36,-32 L-16,-16 L20,-7 L-16,3 L20,11 L-14,17 L36,32"/>
+    <line x1="0" y1="-34" x2="0" y2="34" stroke="#222" stroke-width="6"/>
+    <circle class="end" cx="38" cy="-33" r="4"/>
+    <circle class="end" cx="38" cy="33" r="4"/>
+  </g>
+  <text class="circuit" x="390" y="186">交流回路</text>
+  <text class="note" x="390" y="202">コイルのギザギザの中を鉄片が通る形</text>
+
+  <rect class="card" x="520" y="40" width="236" height="170" rx="6"/>
+  <text class="name" x="638" y="62">誘導形</text>
+  <g transform="translate(634 122)">
+    <circle class="thin" r="34"/>
+    <circle class="thin" r="11"/>
+    <line class="thin" x1="24" y1="-40" x2="24" y2="40"/>
+  </g>
+  <text class="circuit" x="638" y="186">交流回路</text>
+  <text class="note" x="638" y="202">二重の円と縦線。電力量計に使う</text>
+
+  <!-- position -->
+  <text class="h" x="24" y="240">置き方を表す記号</text>
+
+  <rect class="card" x="24" y="252" width="236" height="140" rx="6"/>
+  <text class="name" x="142" y="274">鉛直</text>
+  <use href="#vertical" x="142" y="322"/>
+  <text class="note" x="142" y="378">目盛板を立てて使う</text>
+
+  <rect class="card" x="272" y="252" width="236" height="140" rx="6"/>
+  <text class="name" x="390" y="274">水平</text>
+  <use href="#horizontal" x="390" y="322"/>
+  <text class="note" x="390" y="378">目盛板を水平に置いて使う</text>
+
+  <!-- reading example -->
+  <rect class="card" x="520" y="252" width="236" height="140" rx="6"/>
+  <text class="name" x="638" y="274">読み方の例</text>
+  <g transform="translate(600 318) scale(0.75)"><use href="#coil"/></g>
+  <g transform="translate(676 322) scale(0.75)"><use href="#horizontal"/></g>
+  <text class="circuit" x="638" y="366">可動コイル形 ＋ 水平</text>
+  <text class="note" x="638" y="382">直流回路で、水平に置いて使う</text>
+</svg>

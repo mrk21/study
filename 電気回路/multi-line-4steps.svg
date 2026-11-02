@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 660" width="860" height="660" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .small { font-size: 12px; fill: #555; }
+    .mid { text-anchor: middle; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .jb { stroke: #7c8aa0; stroke-width: 1.5; stroke-dasharray: 6 4; fill: #f6f8fb; }
+    .black { stroke: #222; stroke-width: 3.5; fill: none; }
+    .white-edge { stroke: #7c7c7c; stroke-width: 6.5; fill: none; }
+    .white-core { stroke: #fff; stroke-width: 3.5; fill: none; }
+    .neutral { fill: #0b62a4; }
+    .live { fill: #b4231a; }
+    .ret { fill: #0a6b41; }
+    .rule { stroke: #d5dbe3; }
+  </style>
+  <defs>
+    <g id="jb"><circle class="jb" cx="200" cy="140" r="72"/></g>
+    <g id="devices">
+      <text class="b" x="28" y="123">L</text>
+      <text class="b" x="28" y="167">N</text>
+      <circle class="sym" cx="200" cy="30" r="17"/>
+      <text class="b mid" x="200" y="35">R</text>
+      <text x="226" y="35">ランプ類</text>
+      <circle class="sym" cx="365" cy="118" r="6"/>
+      <circle class="sym" cx="365" cy="162" r="6"/>
+      <text x="340" y="96">コンセント</text>
+      <text class="small" x="376" y="167">W</text>
+      <circle class="sym" cx="170" cy="252" r="6"/>
+      <circle class="sym" cx="230" cy="252" r="6"/>
+      <path d="M176,250 L216,232" stroke="#222" stroke-width="2.5" fill="none"/>
+      <text x="246" y="257">スイッチ</text>
+    </g>
+    <g id="wires-n">
+      <path class="white-edge" d="M44,162 H359 M175,162 V30 H183"/>
+      <path class="white-core" d="M44,162 H359 M175,162 V30 H183"/>
+    </g>
+    <circle id="dot-n" class="neutral" cx="175" cy="162" r="6"/>
+    <g id="wires-l">
+      <path class="black" d="M44,118 H359 M230,118 V246"/>
+    </g>
+    <circle id="dot-l" class="live" cx="230" cy="118" r="6"/>
+    <g id="wires-r">
+      <path class="white-edge" d="M170,246 V196 H200"/>
+      <path class="white-core" d="M170,246 V196 H200"/>
+      <path class="black" d="M200,196 V47"/>
+    </g>
+    <circle id="dot-r" class="ret" cx="200" cy="196" r="6"/>
+  </defs>
+
+  <!-- background: fixed so the wire colors stay readable in any theme -->
+  <rect width="860" height="660" rx="8" fill="#fff"/>
+  <line class="rule" x1="430" y1="12" x2="430" y2="616"/>
+  <line class="rule" x1="16" y1="312" x2="844" y2="312"/>
+
+  <!-- step 1 -->
+  <text class="h" x="20" y="28">① 図記号を書く</text>
+  <g transform="translate(14 36)">
+    <use href="#jb"/>
+    <use href="#devices"/>
+    <path d="M44,118 H10 M44,162 H10" stroke="none"/>
+  </g>
+
+  <!-- step 2 -->
+  <text class="h" x="450" y="28">② N 側（白線）をランプ類とコンセントへ</text>
+  <g transform="translate(444 36)">
+    <use href="#jb"/>
+    <use href="#wires-n"/>
+    <use href="#devices"/>
+    <use href="#dot-n"/>
+    <text class="neutral b" x="92" y="184">白線がつながる</text>
+  </g>
+
+  <!-- step 3 -->
+  <text class="h" x="20" y="340">③ L 側（黒線）をスイッチとコンセントへ</text>
+  <g transform="translate(14 348)">
+    <use href="#jb"/>
+    <use href="#wires-n"/>
+    <use href="#wires-l"/>
+    <use href="#devices"/>
+    <use href="#dot-n"/>
+    <use href="#dot-l"/>
+    <text class="live b" x="242" y="140">黒線がつながる</text>
+  </g>
+
+  <!-- step 4 -->
+  <text class="h" x="450" y="340">④ 対応するスイッチとランプ類をつなぐ</text>
+  <g transform="translate(444 348)">
+    <use href="#jb"/>
+    <use href="#wires-n"/>
+    <use href="#wires-l"/>
+    <use href="#wires-r"/>
+    <use href="#devices"/>
+    <use href="#dot-n"/>
+    <use href="#dot-l"/>
+    <use href="#dot-r"/>
+    <text class="ret b" x="44" y="216">帰り線</text>
+    <text class="small" x="44" y="232">スイッチの白と</text>
+    <text class="small" x="44" y="248">ランプ類の黒</text>
+  </g>
+
+  <text class="small mid" x="430" y="640">色つきの点が接続。点のない交差はつながっていない。白線は灰色の縁取りで表示。</text>
+</svg>

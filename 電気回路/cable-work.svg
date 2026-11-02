@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 14px; font-weight: 700; fill: #1b3a5c; }
+    .value { font-size: 15px; font-weight: 700; fill: #b4500f; text-anchor: middle; }
+    .value-start { font-size: 15px; font-weight: 700; fill: #b4500f; }
+    .small { font-size: 12px; fill: #555; }
+    .structure { fill: #d9dee5; stroke: #8a95a5; }
+    .cable { stroke: #222; stroke-width: 5; fill: none; stroke-linecap: round; }
+    .fat { stroke: #5b6675; stroke-width: 14; fill: none; }
+    .support { fill: #f08c2e; stroke: #a84a0c; }
+    .dim { stroke: #666; stroke-width: 1.5; fill: none; marker-start: url(#start); marker-end: url(#end); }
+    .divider { stroke: #d5dbe3; }
+  </style>
+  <defs>
+    <marker id="end" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9" fill="none" stroke="#666" stroke-width="1.5"/></marker>
+    <marker id="start" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto"><path d="M9,1 L1,5 L9,9" fill="none" stroke="#666" stroke-width="1.5"/></marker>
+  </defs>
+
+  <!-- background: fixed so the labels stay readable in any theme -->
+  <rect width="800" height="360" rx="8" fill="#fff"/>
+  <path class="divider" d="M265,12 V150 M525,12 V348 M16,158 H515"/>
+
+  <!-- general cable -->
+  <text class="h" x="24" y="30">ケーブル（下面・側面に沿わせる）</text>
+  <rect class="structure" x="24" y="44" width="225" height="14"/>
+  <line class="cable" x1="30" y1="74" x2="244" y2="74"/>
+  <rect class="support" x="52" y="58" width="10" height="24"/>
+  <rect class="support" x="212" y="58" width="10" height="24"/>
+  <line class="dim" x1="57" y1="102" x2="217" y2="102"/>
+  <text class="value" x="137" y="128">2 m 以下</text>
+
+  <!-- cabtyre cable -->
+  <text class="h" x="280" y="30">キャブタイヤケーブル</text>
+  <rect class="structure" x="280" y="44" width="225" height="14"/>
+  <line class="cable" x1="286" y1="74" x2="500" y2="74"/>
+  <rect class="support" x="348" y="58" width="10" height="24"/>
+  <rect class="support" x="428" y="58" width="10" height="24"/>
+  <line class="dim" x1="353" y1="102" x2="433" y2="102"/>
+  <text class="value" x="393" y="128">1 m 以下</text>
+
+  <!-- vertical cable -->
+  <text class="h" x="540" y="30">垂直に取り付ける</text>
+  <rect class="structure" x="686" y="44" width="14" height="240"/>
+  <line class="cable" x1="670" y1="50" x2="670" y2="278"/>
+  <rect class="support" x="662" y="66" width="24" height="10"/>
+  <rect class="support" x="662" y="246" width="24" height="10"/>
+  <line class="dim" x1="642" y1="71" x2="642" y2="251"/>
+  <text class="value-start" x="560" y="166">6 m 以下</text>
+  <text x="540" y="310">接触防護措置を施した場所で、</text>
+  <text x="540" y="328">垂直に取り付ける。<tspan font-weight="700">両方</tspan>が必要</text>
+
+  <!-- bending radius -->
+  <text class="h" x="24" y="182">曲げるとき</text>
+  <path class="fat" d="M40,214 H120 A91,91 0 0 1 211,305 V340"/>
+  <line x1="120" y1="305" x2="178.6" y2="246.4" stroke="#b4500f" stroke-width="2"/>
+  <circle cx="120" cy="305" r="3" fill="#b4500f"/>
+  <text class="value-start" x="124" y="282">r</text>
+  <line x1="56" y1="194" x2="56" y2="205" stroke="#666" stroke-width="1.5"/>
+  <text class="small" x="62" y="201">外径 D</text>
+  <text class="value-start" x="262" y="250">r ≧ 6D</text>
+  <text x="262" y="276">内側の半径 r は、ケーブルの</text>
+  <text x="262" y="294">外径 D の 6 倍以上</text>
+</svg>

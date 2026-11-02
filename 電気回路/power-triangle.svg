@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 275" width="400" height="275" font-family="-apple-system, system-ui, 'Segoe UI', sans-serif">
+  <style>
+    .edge { fill: none; stroke-width: 3; stroke-linecap: round; }
+    .thin { stroke-width: 1.2; fill: none; }
+    text { font-size: 15px; font-weight: 600; }
+    .small { font-size: 13px; font-weight: 500; }
+    .neutral { stroke: #555; }
+    .ntext { fill: #333; }
+    .p  { stroke: #0a7d4b; } .ptext { fill: #0a7d4b; }
+    .q  { stroke: #c7601e; } .qtext { fill: #c7601e; }
+    .s  { stroke: #2563c7; } .stext { fill: #2563c7; }
+    .dot { fill: #333; }
+    @media (prefers-color-scheme: dark) {
+      .neutral { stroke: #aaa; }
+      .ntext { fill: #ddd; }
+      .p  { stroke: #3ddc84; } .ptext { fill: #3ddc84; }
+      .q  { stroke: #ff9d4d; } .qtext { fill: #ff9d4d; }
+      .s  { stroke: #6ea8ff; } .stext { fill: #6ea8ff; }
+      .dot { fill: #ddd; }
+    }
+  </style>
+
+  <!-- triangle sides -->
+  <line class="edge p" x1="55" y1="210" x2="285" y2="210"/>
+  <line class="edge q" x1="285" y1="210" x2="285" y2="95"/>
+  <line class="edge s" x1="55" y1="210" x2="285" y2="95"/>
+
+  <!-- right-angle mark at P-Q corner -->
+  <polyline class="thin neutral" points="273,210 273,198 285,198"/>
+
+  <!-- phi angle arc -->
+  <path class="thin neutral" d="M95,210 A40,40 0 0 0 90.78,192.11"/>
+  <text class="small ntext" x="101" y="200">&#966;</text>
+
+  <!-- vertices -->
+  <circle class="dot" cx="55" cy="210" r="3"/>
+  <circle class="dot" cx="285" cy="210" r="3"/>
+  <circle class="dot" cx="285" cy="95" r="3"/>
+
+  <!-- labels -->
+  <text class="ptext" x="170" y="236" text-anchor="middle">P（有効電力）</text>
+  <text class="qtext" x="298" y="156" text-anchor="start">Q（無効電力）</text>
+  <text class="stext" x="150" y="128" text-anchor="middle">S（皮相電力）</text>
+  <text class="small ntext" x="170" y="262" text-anchor="middle">cos &#966; = P / S = 底辺 / 斜辺</text>
+</svg>

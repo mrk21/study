@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 490" width="900" height="490" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .b { font-size: 14px; font-weight: 700; text-anchor: middle; }
+    .head { font-size: 14px; font-weight: 700; fill: #1b3a5c; }
+    .group { font-size: 13px; font-weight: 700; fill: #1b3a5c; text-anchor: middle; }
+    .group200 { font-size: 13px; font-weight: 700; fill: #b4500f; text-anchor: middle; }
+    .spec { font-size: 11px; fill: #333; }
+    .spec200 { font-size: 11px; font-weight: 700; fill: #b4500f; }
+    .letter { font-size: 12px; text-anchor: middle; }
+    .num { font-size: 12px; font-weight: 700; fill: #fff; text-anchor: middle; }
+    .legend { font-size: 13px; }
+    .wire { stroke: #222; stroke-width: 2.5; fill: none; }
+    .box { stroke: #222; stroke-width: 2.5; fill: #fff; }
+    .main { stroke: #1b3a5c; stroke-width: 3; fill: #e8eef6; }
+    .panel { stroke: #7c8aa0; stroke-width: 1.5; fill: #f8fafc; }
+    .guide { stroke: #7c8aa0; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+    .ring { stroke: #222; stroke-width: 1.5; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="up" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="4" refY="1" orient="0"><path d="M0,8 L4,0 L8,8 Z" fill="#222"/></marker>
+    <g id="branch">
+      <line class="wire" x1="0" y1="300" x2="0" y2="250"/>
+      <line class="wire" x1="0" y1="222" x2="0" y2="152" marker-end="url(#up)"/>
+      <rect class="box" x="-13" y="222" width="26" height="28"/>
+      <text class="b" x="0" y="241">B</text>
+      <circle cx="0" cy="300" r="3.5" fill="#222"/>
+      <circle class="ring" cx="0" cy="130" r="10"/>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the labels stay readable in any theme -->
+  <rect width="900" height="490" rx="8" fill="#fff"/>
+  <text class="head" x="24" y="30">分電盤の結線図の例（単線図）</text>
+
+  <!-- panel outline and indoor/outdoor boundary -->
+  <rect class="panel" x="178" y="78" width="702" height="262"/>
+  <line class="guide" x1="178" y1="340" x2="178" y2="372"/>
+  <text x="130" y="360">屋外</text>
+  <text x="186" y="362">屋内</text>
+
+  <!-- service entrance and meter -->
+  <text x="24" y="118">1φ3W</text>
+  <text x="24" y="134">100/200 V</text>
+  <path class="wire" d="M30,146 H62 L46,166 H108 V222"/>
+  <rect class="box" x="88" y="222" width="40" height="36"/>
+  <text class="b" x="108" y="245">Wh</text>
+  <path class="wire" d="M128,240 H190"/>
+
+  <!-- main breaker and bus -->
+  <rect class="main" x="190" y="222" width="40" height="36"/>
+  <text class="b" x="210" y="245">BE</text>
+  <text class="spec" x="186" y="164">3P</text>
+  <text class="spec" x="186" y="178">50AF</text>
+  <text class="spec" x="186" y="192">50A</text>
+  <text class="spec" x="186" y="206">30mA</text>
+  <path class="wire" d="M210,258 V300 H832"/>
+
+  <!-- group labels -->
+  <path class="guide" d="M456,86 V210 M732,86 V210"/>
+  <text class="group" x="349" y="104">照明</text>
+  <text class="group" x="579" y="104">コンセント</text>
+  <text class="group200" x="786" y="104">200 V の機器</text>
+
+  <!-- 100 V branches -->
+  <g id="branches">
+    <use href="#branch" x="280"/><text class="letter" x="280" y="134">a</text>
+    <use href="#branch" x="326"/><text class="letter" x="326" y="134">b</text>
+    <use href="#branch" x="372"/><text class="letter" x="372" y="134">c</text>
+    <use href="#branch" x="418"/><text class="letter" x="418" y="134">d</text>
+    <use href="#branch" x="464"/><text class="letter" x="464" y="134">e</text>
+    <use href="#branch" x="510"/><text class="letter" x="510" y="134">f</text>
+    <use href="#branch" x="556"/><text class="letter" x="556" y="134">g</text>
+    <use href="#branch" x="602"/><text class="letter" x="602" y="134">h</text>
+    <use href="#branch" x="648"/><text class="letter" x="648" y="134">i</text>
+    <use href="#branch" x="694"/><text class="letter" x="694" y="134">j</text>
+    <use href="#branch" x="740"/><text class="letter" x="740" y="134">k</text>
+    <use href="#branch" x="786"/><text class="letter" x="786" y="134">l</text>
+    <use href="#branch" x="832"/><text class="letter" x="832" y="134">m</text>
+  </g>
+  <g class="spec">
+    <text class="spec" x="286" y="172">100V</text><text class="spec" x="286" y="186">2P</text><text class="spec" x="286" y="200">20A</text>
+    <text class="spec" x="332" y="172">100V</text><text class="spec" x="332" y="186">2P</text><text class="spec" x="332" y="200">20A</text>
+    <text class="spec" x="378" y="172">100V</text><text class="spec" x="378" y="186">2P</text><text class="spec" x="378" y="200">20A</text>
+    <text class="spec" x="424" y="172">100V</text><text class="spec" x="424" y="186">2P</text><text class="spec" x="424" y="200">20A</text>
+    <text class="spec" x="470" y="172">100V</text><text class="spec" x="470" y="186">2P</text><text class="spec" x="470" y="200">20A</text>
+    <text class="spec" x="516" y="172">100V</text><text class="spec" x="516" y="186">2P</text><text class="spec" x="516" y="200">20A</text>
+    <text class="spec" x="562" y="172">100V</text><text class="spec" x="562" y="186">2P</text><text class="spec" x="562" y="200">20A</text>
+    <text class="spec" x="608" y="172">100V</text><text class="spec" x="608" y="186">2P</text><text class="spec" x="608" y="200">20A</text>
+    <text class="spec" x="654" y="172">100V</text><text class="spec" x="654" y="186">2P</text><text class="spec" x="654" y="200">20A</text>
+    <text class="spec" x="700" y="172">100V</text><text class="spec" x="700" y="186">2P</text><text class="spec" x="700" y="200">20A</text>
+    <text class="spec200" x="746" y="172">200V</text><text class="spec200" x="746" y="186">2P</text><text class="spec200" x="746" y="200">20A</text>
+    <text class="spec200" x="792" y="172">200V</text><text class="spec200" x="792" y="186">2P</text><text class="spec200" x="792" y="200">20A</text>
+    <text class="spec200" x="838" y="172">200V</text><text class="spec200" x="838" y="186">2P</text><text class="spec200" x="838" y="200">20A</text>
+  </g>
+
+  <!-- earth -->
+  <path class="thin" d="M840,322 V372 M827,372 H853 M832,378 H848 M837,384 H843"/>
+  <circle class="ring" cx="840" cy="322" r="7"/>
+  <path class="thin" d="M835,322 H845 M840,317 V327" stroke-width="1.5"/>
+
+  <!-- numbered markers -->
+  <g>
+    <circle cx="108" cy="204" r="9" fill="#1b3a5c"/><text class="num" x="108" y="208">1</text>
+    <circle cx="246" cy="240" r="9" fill="#1b3a5c"/><text class="num" x="246" y="244">2</text>
+    <circle cx="264" cy="278" r="9" fill="#1b3a5c"/><text class="num" x="264" y="282">3</text>
+    <circle cx="868" cy="356" r="9" fill="#1b3a5c"/><text class="num" x="868" y="360">4</text>
+  </g>
+
+  <!-- legend -->
+  <text class="legend" x="24" y="404"><tspan font-weight="700">1 電力量計：</tspan>使った電力量を測る。屋外に付く</text>
+  <text class="legend" x="24" y="426"><tspan font-weight="700">2 主幹：</tspan>過負荷保護付の漏電遮断器（BE）。3 極、定格 50 A、感度 30 mA で、全回路の漏電と過電流を見る</text>
+  <text class="legend" x="24" y="448"><tspan font-weight="700">3 分岐：</tspan>配線用遮断器（B）。回路ごとに 1 個。100 V は 2P1E でも 2P2E でも可、200 V は 2P2E</text>
+  <text class="legend" x="24" y="470"><tspan font-weight="700">4 接地：</tspan>接地端子と接地極。回路の名前と個数は例</text>
+</svg>

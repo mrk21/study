@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 482" width="780" height="482" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 14px; font-weight: 500; fill: #333; }
+    .title { font-size: 16px; font-weight: 700; fill: #1b3a5c; }
+    .key { font-weight: 700; fill: #b4231a; }
+    .small { font-size: 12px; fill: #555; }
+    .num { font-size: 15px; font-weight: 700; fill: #fff; text-anchor: middle; }
+    .row { fill: #f6f8fb; stroke: #d5dbe3; }
+    .chip { fill: #fff; stroke: #1b3a5c; stroke-width: 1.5; }
+    .chiptext { font-size: 13px; font-weight: 700; fill: #1b3a5c; text-anchor: middle; }
+    .ngchip { fill: #fff; stroke: #b4231a; stroke-width: 1.5; }
+    .ngtext { font-size: 13px; font-weight: 700; fill: #b4231a; text-anchor: middle; }
+    .okmark { font-size: 22px; font-weight: 700; fill: #1b7a3d; text-anchor: middle; }
+    .ngmark { font-size: 24px; font-weight: 700; fill: #b4231a; text-anchor: middle; }
+    .label { font-size: 12px; fill: #333; text-anchor: middle; }
+    .sym { stroke: #222; stroke-width: 2.5; fill: none; }
+    .box { stroke: #222; stroke-width: 1.5; fill: #dfe5ec; }
+  </style>
+  <defs>
+    <circle id="n" r="14" fill="#1b3a5c"/>
+    <rect id="r" class="row" width="748" height="72" rx="6"/>
+  </defs>
+
+  <!-- background: fixed so the labels stay readable in any theme -->
+  <rect width="780" height="482" rx="8" fill="#fff"/>
+
+  <text class="title" x="16" y="28">機械器具の接地工事を省略できる条件（どれか 1 つを満たせばよい）</text>
+
+  <!-- 1 -->
+  <use href="#r" x="16" y="42"/>
+  <use href="#n" x="42" y="78"/><text class="num" x="42" y="83">1</text>
+  <text x="68" y="72">対地電圧 <tspan class="key">150 V 以下</tspan>の機器を</text>
+  <text x="68" y="94"><tspan class="key">乾燥した場所</tspan>に施設する</text>
+  <rect class="chip" x="442" y="62" width="104" height="30" rx="15"/><text class="chiptext" x="494" y="82">150 V 以下</text>
+  <rect class="chip" x="556" y="62" width="80" height="30" rx="15"/><text class="chiptext" x="596" y="82">乾燥</text>
+  <text class="small" x="648" y="74">三相 200 V は</text>
+  <text class="small" x="648" y="92">使えない</text>
+
+  <!-- 2 -->
+  <use href="#r" x="16" y="120"/>
+  <use href="#n" x="42" y="156"/><text class="num" x="42" y="161">2</text>
+  <text x="68" y="150"><tspan class="key">乾燥した木製の床</tspan>など</text>
+  <text x="68" y="172">絶縁性のものの上で使う</text>
+  <rect class="box" x="462" y="132" width="44" height="26"/>
+  <rect x="444" y="158" width="80" height="12" fill="#b98a5a" stroke="#222" stroke-width="1"/>
+  <text class="label" x="484" y="185">木の床</text>
+  <text class="okmark" x="538" y="168">○</text>
+  <rect class="box" x="592" y="132" width="44" height="26"/>
+  <rect x="574" y="158" width="80" height="12" fill="#a9afb6" stroke="#222" stroke-width="1"/>
+  <text class="label" x="614" y="185">コンクリートの床</text>
+  <text class="ngmark" x="668" y="168">×</text>
+
+  <!-- 3 -->
+  <use href="#r" x="16" y="198"/>
+  <use href="#n" x="42" y="234"/><text class="num" x="42" y="239">3</text>
+  <text x="68" y="228"><tspan class="key">二重絶縁構造</tspan>の機器</text>
+  <text class="small" x="68" y="250">電気用品安全法の適用を受けるもの</text>
+  <rect class="sym" x="466" y="212" width="44" height="44"/>
+  <rect class="sym" x="477" y="223" width="22" height="22"/>
+  <text class="small" x="526" y="239">二重絶縁の表示</text>
+
+  <!-- 4 -->
+  <use href="#r" x="16" y="276"/>
+  <use href="#n" x="42" y="312"/><text class="num" x="42" y="317">4</text>
+  <text x="68" y="306">電源側に<tspan class="key">絶縁変圧器</tspan>を施設し、</text>
+  <text x="68" y="328">負荷側の電路を<tspan class="key">接地しない</tspan></text>
+  <circle class="sym" cx="470" cy="312" r="14"/>
+  <circle class="sym" cx="490" cy="312" r="14"/>
+  <rect class="chip" x="520" y="282" width="134" height="27" rx="13"/><text class="chiptext" x="587" y="301">二次側 300 V 以下</text>
+  <rect class="chip" x="520" y="315" width="134" height="27" rx="13"/><text class="chiptext" x="587" y="334">3 kV·A 以下</text>
+
+  <!-- 5 -->
+  <use href="#r" x="16" y="354"/>
+  <use href="#n" x="42" y="390"/><text class="num" x="42" y="395">5</text>
+  <text x="68" y="384">電流動作型の<tspan class="key">漏電遮断器</tspan>を施設する</text>
+  <text class="small" x="68" y="406">電気用品安全法の適用を受けるもの</text>
+  <rect class="chip" x="442" y="360" width="104" height="27" rx="13"/><text class="chiptext" x="494" y="379">15 mA 以下</text>
+  <rect class="chip" x="556" y="360" width="104" height="27" rx="13"/><text class="chiptext" x="608" y="379">0.1 秒以下</text>
+  <rect class="ngchip" x="442" y="393" width="218" height="27" rx="13"/><text class="ngtext" x="551" y="412">水気のある場所では使えない</text>
+
+  <text class="small" x="16" y="450">30 mA の漏電遮断器や、乾燥したコンクリートの床では、この条件に当てはまらない。</text>
+  <text class="small" x="16" y="470">動画の整理と試験問題をもとに描いた図。細かい条件は本文の表を参照。</text>
+</svg>

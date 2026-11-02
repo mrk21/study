@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" width="780" height="400" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .b { font-size: 15px; font-weight: 700; }
+    .main-t { font-size: 14px; font-weight: 700; fill: #1b3a5c; }
+    .cond { font-size: 14px; font-weight: 700; fill: #b4500f; }
+    .small { font-size: 12px; fill: #555; }
+    .trunk { stroke: #1b3a5c; stroke-width: 5; fill: none; }
+    .wire { stroke: #222; stroke-width: 2.5; fill: none; }
+    .guarded { stroke: #f08c2e; stroke-width: 6; fill: none; }
+    .box { stroke: #222; stroke-width: 2.5; fill: #fff; }
+    .main-box { stroke: #1b3a5c; stroke-width: 3; fill: #fff; }
+    .dim { stroke: #666; stroke-width: 1.5; fill: none; marker-start: url(#arrow-up); marker-end: url(#arrow-down); }
+  </style>
+  <defs>
+    <marker id="arrow-down" markerWidth="8" markerHeight="8" refX="4" refY="7" orient="0"><path d="M0,1 L4,7 L8,1" fill="none" stroke="#666" stroke-width="1.5"/></marker>
+    <marker id="arrow-up" markerWidth="8" markerHeight="8" refX="4" refY="1" orient="0"><path d="M0,7 L4,1 L8,7" fill="none" stroke="#666" stroke-width="1.5"/></marker>
+  </defs>
+
+  <!-- background: fixed so the labels stay readable in any theme -->
+  <rect width="780" height="400" rx="8" fill="#fff"/>
+
+  <!-- trunk line and its breaker -->
+  <text class="main-t" x="65" y="34" text-anchor="middle">幹線の遮断器</text>
+  <text class="main-t" x="65" y="52" text-anchor="middle">定格 I<tspan dy="3" font-size="10">B</tspan></text>
+  <line class="trunk" x1="90" y1="85" x2="750" y2="85"/>
+  <rect class="main-box" x="42" y="62" width="48" height="46"/>
+  <text class="b" x="66" y="91" text-anchor="middle">B</text>
+  <text class="main-t" x="750" y="70" text-anchor="end">幹線</text>
+
+  <!-- branch up to 3 m -->
+  <path class="wire" d="M180,155 V300"/>
+  <path class="guarded" d="M180,85 V125"/>
+  <circle cx="180" cy="85" r="6" fill="#1b3a5c"/>
+  <rect class="box" x="165" y="125" width="30" height="30"/>
+  <text class="b" x="180" y="146" text-anchor="middle">B</text>
+  <line class="dim" x1="212" y1="89" x2="212" y2="123"/>
+  <text x="224" y="111">3 m 以下</text>
+
+  <!-- branch from 3 m to 8 m -->
+  <path class="wire" d="M410,205 V300"/>
+  <path class="guarded" d="M410,85 V175"/>
+  <circle cx="410" cy="85" r="6" fill="#1b3a5c"/>
+  <rect class="box" x="395" y="175" width="30" height="30"/>
+  <text class="b" x="410" y="196" text-anchor="middle">B</text>
+  <line class="dim" x1="442" y1="89" x2="442" y2="173"/>
+  <text x="454" y="128">3 m を超え</text>
+  <text x="454" y="146">8 m 以下</text>
+
+  <!-- branch over 8 m -->
+  <path class="wire" d="M640,270 V300"/>
+  <path class="guarded" d="M640,85 V240"/>
+  <circle cx="640" cy="85" r="6" fill="#1b3a5c"/>
+  <rect class="box" x="625" y="240" width="30" height="30"/>
+  <text class="b" x="640" y="261" text-anchor="middle">B</text>
+  <line class="dim" x1="672" y1="89" x2="672" y2="238"/>
+  <text x="684" y="170">8 m を超える</text>
+
+  <!-- conditions on the branch wire -->
+  <text class="small" x="180" y="322" text-anchor="middle">分岐線の許容電流の条件</text>
+  <text class="cond" x="180" y="344" text-anchor="middle">割合の条件なし</text>
+  <text class="small" x="410" y="322" text-anchor="middle">分岐線の許容電流の条件</text>
+  <text class="cond" x="410" y="344" text-anchor="middle">I<tspan dy="3" font-size="10">B</tspan><tspan dy="-3"> の 0.35 倍以上</tspan></text>
+  <text class="small" x="640" y="322" text-anchor="middle">分岐線の許容電流の条件</text>
+  <text class="cond" x="640" y="344" text-anchor="middle">I<tspan dy="3" font-size="10">B</tspan><tspan dy="-3"> の 0.55 倍以上</tspan></text>
+
+  <!-- legend -->
+  <line class="guarded" x1="110" y1="376" x2="146" y2="376"/>
+  <text class="small" x="156" y="380">分岐回路の遮断器（B）より手前の区間。幹線の遮断器でしか守られないので、長いほど太い電線が必要</text>
+</svg>
