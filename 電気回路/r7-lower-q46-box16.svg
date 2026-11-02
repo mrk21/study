@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1030 770" width="1030" height="770" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .small { font-size: 12px; fill: #555; }
+    .mid { text-anchor: middle; }
+    .end { text-anchor: end; }
+    .single { stroke: #222; stroke-width: 2.5; fill: none; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 1.5; fill: none; }
+    .jb { stroke: #7c8aa0; stroke-width: 1.5; stroke-dasharray: 6 4; fill: #f6f8fb; }
+    .cable { stroke: #9aa5b4; stroke-width: 1.5; fill: #e9edf3; }
+    .ext { stroke: #7c8aa0; stroke-width: 1.5; fill: #fff; }
+    .black { stroke: #222; stroke-width: 3; fill: none; }
+    .white-edge { stroke: #7c7c7c; stroke-width: 6; fill: none; }
+    .white-core { stroke: #fff; stroke-width: 3; fill: none; }
+    .ku { stroke: #7b3fb5; stroke-width: 3; fill: none; }
+    .ke { stroke: #0a8a7a; stroke-width: 3; fill: none; }
+    .ko { stroke: #d6312b; stroke-width: 3; fill: none; }
+    .t-n { font-weight: 700; fill: #0b62a4; }
+    .t-l { font-weight: 700; fill: #222; }
+    .t-ku { font-weight: 700; fill: #7b3fb5; }
+    .t-ke { font-weight: 700; fill: #0a8a7a; }
+    .t-ko { font-weight: 700; fill: #d6312b; }
+    .o-l { stroke: #222; stroke-width: 0.8; }
+    .o-ku { stroke: #7b3fb5; stroke-width: 0.8; }
+    .o-ke { stroke: #0a8a7a; stroke-width: 0.8; }
+    .o-ko { stroke: #d6312b; stroke-width: 0.8; }
+  </style>
+  <defs>
+    <clipPath id="jbclip"><circle r="16"/></clipPath>
+    <g id="box">
+      <circle r="16" fill="#fff"/>
+      <g clip-path="url(#jbclip)">
+        <path class="thin" d="M-30,18 L6,-18 M-20,18 L16,-18 M-10,18 L26,-18 M0,18 L36,-18"/>
+      </g>
+      <circle r="16" fill="none" stroke="#222" stroke-width="2"/>
+    </g>
+    <g id="outlet">
+      <circle class="sym" r="15"/>
+      <path d="M-13,7.5 A15,15 0 0 0 13,7.5 Z" fill="#222"/>
+      <path class="thin" d="M-4,-14.5 V7.5 M4,-14.5 V7.5"/>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the wire colors stay readable in any theme -->
+  <rect width="1030" height="770" rx="8" fill="#fff"/>
+
+  <!-- single-line excerpt -->
+  <text class="h" x="20" y="26">単線図（⑯ と ⑰ のまわりを抜き出し）</text>
+  <path class="single" d="M234,76 H60 V161 M235,88 H150 V116 M266,80 H314 M250,96 V152 M262,91 L367,139 M388,136 L416,76 M396,150 H462 M388,164 L428,200 M372,164 L334,206"/>
+  <path d="M478,150 L460,143 V157 Z" fill="#222"/>
+  <use href="#box" x="250" y="80"/>
+  <use href="#box" x="380" y="150"/>
+  <use href="#box" x="325" y="220"/>
+  <text class="b mid" x="250" y="56">⑯</text>
+  <text class="b" x="404" y="138">⑰</text>
+  <circle class="sym" cx="150" cy="130" r="14"/>
+  <text class="t-ku" x="170" y="135">ク</text>
+  <circle class="sym" cx="60" cy="175" r="14"/>
+  <text class="t-ke" x="80" y="180">ケ</text>
+  <circle class="sym" cx="330" cy="80" r="16"/>
+  <text class="small mid" x="330" y="84">DL</text>
+  <text class="t-ko" x="352" y="85">コ</text>
+  <circle cx="232" cy="160" r="6.5" fill="#222"/>
+  <circle cx="250" cy="160" r="6.5" fill="#222"/>
+  <circle cx="268" cy="160" r="6.5" fill="#222"/>
+  <text class="small" x="208" y="165">D</text>
+  <text class="t-ku mid" x="232" y="184">ク</text>
+  <text class="t-ke mid" x="250" y="184">ケ</text>
+  <text class="t-ko mid" x="268" y="184">コ</text>
+  <text class="t-ko" x="272" y="134">⑮ 3 本</text>
+  <use href="#outlet" x="420" y="60"/>
+  <text class="small" x="440" y="64">2 口</text>
+  <text class="b" x="484" y="155">ⓒ</text>
+  <circle class="sym" cx="435" cy="215" r="16"/>
+  <text class="small mid" x="435" y="219">CL</text>
+  <text class="t-ko" x="457" y="220">コ</text>
+  <text class="small end" x="302" y="224">階段のボックス（⑥）</text>
+
+  <!-- how to read it -->
+  <text class="h" x="540" y="26">読み方</text>
+  <text x="540" y="56">1. 電源（ⓒ）は ⑰ に入る。L と N を ⑰ から ⑯ へ渡す。</text>
+  <text x="540" y="84">2. スイッチ コは ⑯ 側、CL コは ⑰ 側にある。</text>
+  <text x="556" y="104">帰り線も ⑯ から ⑰ へ渡す。</text>
+  <text x="540" y="132">3. ⑮ の本数は N + L + コの帰り線 = <tspan class="t-ko">3 本</tspan>。</text>
+  <text x="540" y="160">4. スイッチまでは L + 帰り線 3 本 = 4 本。</text>
+  <text x="556" y="180">L は渡り線で隣のスイッチへ送る。</text>
+  <text x="540" y="208">5. ⑯ の接続点は N、L、ク、ケ、コの 5 つで、スリーブは 5 個。</text>
+
+  <line x1="12" y1="250" x2="1018" y2="250" stroke="#d5dbe3"/>
+
+  <!-- multi-line diagram -->
+  <text class="h" x="20" y="276">複線図</text>
+
+  <rect class="jb" x="110" y="420" width="420" height="145" rx="24"/>
+  <text class="b" x="122" y="444">⑯</text>
+  <rect class="jb" x="614" y="420" width="280" height="145" rx="24"/>
+  <text class="b" x="626" y="444">⑰</text>
+
+  <!-- the 3-core cable between the boxes -->
+  <rect class="cable" x="540" y="432" width="64" height="112" rx="10"/>
+
+  <!-- neutral (white) -->
+  <path class="white-edge" d="M178,352 V450 H764 M298,352 V420 L320,450 M402,352 V395 L320,450 M764,450 H914 M779,352 L764,450 M764,450 V595 M764,450 L669,607"/>
+  <path class="white-core" d="M178,352 V450 H764 M298,352 V420 L320,450 M402,352 V395 L320,450 M764,450 H914 M779,352 L764,450 M764,450 V595 M764,450 L669,607"/>
+  <!-- live (black) -->
+  <path class="black" d="M460,613 V490 H914 M809,352 L824,490 M824,490 V595"/>
+  <!-- returns -->
+  <path class="ku" d="M162,352 V613"/>
+  <path class="ke" d="M282,352 V613"/>
+  <path class="ko" d="M418,352 V613 M418,530 H639 V607"/>
+
+  <!-- cable labels -->
+  <text class="t-ko mid" x="572" y="426">⑮ 3 本</text>
+  <text class="small mid" x="572" y="446">白 N</text>
+  <text class="small mid" x="572" y="486">黒 L</text>
+  <text class="small mid" x="572" y="526">赤 コ</text>
+  <text class="t-ko mid" x="572" y="564">赤はコの帰り線。</text>
+  <text class="t-ko mid" x="572" y="582">隣の CL コへ渡る</text>
+
+  <!-- connection points -->
+  <circle cx="320" cy="450" r="6" fill="#0b62a4"/>
+  <circle cx="460" cy="490" r="6" fill="#222"/>
+  <circle cx="162" cy="530" r="6" fill="#7b3fb5"/>
+  <circle cx="282" cy="530" r="6" fill="#0a8a7a"/>
+  <circle cx="418" cy="530" r="6" fill="#d6312b"/>
+  <circle cx="764" cy="450" r="6" fill="#0b62a4"/>
+  <circle cx="824" cy="490" r="6" fill="#222"/>
+  <circle cx="639" cy="530" r="6" fill="#d6312b"/>
+
+  <!-- wire count and crimp mark at each connection point -->
+  <text class="t-n" x="328" y="470">4本 → 小</text>
+  <text class="t-l" x="468" y="482">2本 → <tspan class="o-l">○</tspan></text>
+  <text class="t-ku" x="170" y="552">2本 → <tspan class="o-ku">○</tspan></text>
+  <text class="t-ke" x="290" y="552">2本 → <tspan class="o-ke">○</tspan></text>
+  <text class="t-ko end" x="410" y="552">3本 → 小</text>
+  <text class="t-n end" x="754" y="440">5本 → 中</text>
+  <text class="t-l" x="832" y="482">4本 → 小</text>
+  <text class="t-ko" x="647" y="550">2本 → <tspan class="o-ko">○</tspan></text>
+
+  <!-- lamps and outlet -->
+  <circle class="sym" cx="170" cy="330" r="22"/>
+  <text class="t-ku mid" x="170" y="335">ク</text>
+  <circle class="sym" cx="290" cy="330" r="22"/>
+  <text class="t-ke mid" x="290" y="335">ケ</text>
+  <circle class="sym" cx="410" cy="330" r="22"/>
+  <text class="b mid" x="410" y="335">DL</text>
+  <text class="t-ko" x="438" y="335">コ</text>
+  <circle class="sym" cx="654" cy="625" r="22"/>
+  <text class="b mid" x="654" y="630">CL</text>
+  <text class="t-ko" x="682" y="630">コ</text>
+  <circle class="sym" cx="794" cy="330" r="22"/>
+  <path d="M775,341 A22,22 0 0 0 813,341 Z" fill="#222"/>
+  <path class="thin" d="M788,309 V341 M800,309 V341"/>
+  <text x="824" y="335">コンセント（2 口）</text>
+
+  <!-- where the other cables go -->
+  <rect class="ext" x="914" y="430" width="100" height="80" rx="6"/>
+  <text class="b mid" x="964" y="463">ⓒ</text>
+  <text class="small mid" x="964" y="483">電源（分電盤）</text>
+  <rect class="ext" x="739" y="595" width="115" height="36" rx="6"/>
+  <text class="small mid" x="796" y="618">⑥ 階段のボックスへ</text>
+
+  <!-- three-gang switch -->
+  <rect class="jb" x="140" y="592" width="340" height="66" rx="10"/>
+  <text x="26" y="600">スイッチまで</text>
+  <text class="b" x="26" y="620">4 本（最少）</text>
+  <circle class="sym" cx="162" cy="618" r="5"/>
+  <circle class="sym" cx="204" cy="618" r="5"/>
+  <path d="M167,616 L196,602" stroke="#222" stroke-width="2.5" fill="none"/>
+  <circle class="sym" cx="282" cy="618" r="5"/>
+  <circle class="sym" cx="324" cy="618" r="5"/>
+  <path d="M287,616 L316,602" stroke="#222" stroke-width="2.5" fill="none"/>
+  <circle class="sym" cx="418" cy="618" r="5"/>
+  <circle class="sym" cx="460" cy="618" r="5"/>
+  <path d="M423,616 L452,602" stroke="#222" stroke-width="2.5" fill="none"/>
+  <path class="black" d="M456,622 V648 H328 V622 M320,622 V648 H204 V623" stroke-width="2"/>
+  <text class="t-ku mid" x="183" y="642">D ク</text>
+  <text class="t-ke mid" x="303" y="640">ケ</text>
+  <text class="t-ko mid" x="439" y="640">コ</text>
+  <text class="small mid" x="310" y="676">スイッチの下の黒線が渡り線（スリーブは使わない）</text>
+
+  <!-- notes -->
+  <text class="small" x="20" y="712">色つきの点が接続点で、点 1 つにスリーブ 1 個。「4本 → 小」は線 4 本で刻印「小」の意味。点のない交差はつながっていない。白線は灰色の縁取りで表示。</text>
+  <text class="small" x="20" y="732">帰り線はスイッチごとに色を変えて描いた（実際の被覆の色ではない。ただし ⑮ の 3 本は VVF 1.6-3C の黒、白、赤）。</text>
+  <text class="small" x="20" y="752">出典：令和7年度下期第二種電気工事士試験の配線図（問 45〜47）。単線図は必要な部分だけを抜き出して描き直し、複線図は図をもとに自作した。</text>
+</svg>
