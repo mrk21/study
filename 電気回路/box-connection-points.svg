@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 530" width="880" height="530" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .small { font-size: 12px; fill: #555; }
+    .mid { text-anchor: middle; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .single { stroke: #222; stroke-width: 2.5; fill: none; }
+    .thin { stroke: #222; stroke-width: 1.5; fill: none; }
+    .jb { stroke: #7c8aa0; stroke-width: 1.5; stroke-dasharray: 6 4; fill: #f6f8fb; }
+    .black { stroke: #222; stroke-width: 3.5; fill: none; }
+    .white-edge { stroke: #7c7c7c; stroke-width: 6.5; fill: none; }
+    .white-core { stroke: #fff; stroke-width: 3.5; fill: none; }
+    .neutral { fill: #0b62a4; }
+    .live { fill: #b4231a; }
+    .ret { fill: #0a6b41; }
+    .neutral-text { fill: #0b62a4; font-weight: 700; }
+    .live-text { fill: #b4231a; font-weight: 700; }
+    .ret-text { fill: #0a6b41; font-weight: 700; }
+    .rule { stroke: #d5dbe3; }
+  </style>
+  <defs>
+    <clipPath id="vvf-clip"><circle cx="150" cy="195" r="23"/></clipPath>
+  </defs>
+
+  <!-- background: fixed so the wire colors stay readable in any theme -->
+  <rect width="880" height="530" rx="8" fill="#fff"/>
+  <line class="rule" x1="310" y1="12" x2="310" y2="400"/>
+  <line class="rule" x1="16" y1="412" x2="864" y2="412"/>
+
+  <!-- single-line diagram -->
+  <text class="h" x="20" y="30">単線図</text>
+  <path class="single" d="M58,195 H127 M173,195 H241 M150,172 V90 M150,218 V322"/>
+  <rect class="sym" x="28" y="178" width="34" height="34"/>
+  <text class="b mid" x="45" y="200">B</text>
+  <text class="small mid" x="45" y="232">電源側</text>
+  <circle class="sym" cx="150" cy="195" r="23"/>
+  <path class="thin" clip-path="url(#vvf-clip)" d="M122,201 L156,167 M127,208 L163,172 M133,215 L170,178 M140,222 L177,185"/>
+  <text class="small" x="168" y="170">ボックス</text>
+  <circle class="sym" cx="150" cy="72" r="18"/>
+  <text class="b mid" x="150" y="77">R</text>
+  <text x="176" y="77">イ</text>
+  <!-- wall outlet: same symbol as outlet-symbols.svg, wall on the right -->
+  <g transform="translate(257 195) rotate(-90) scale(.66)">
+    <circle class="sym" r="24"/>
+    <path d="M-20.78,12 A24,24 0 0 0 20.78,12 Z" fill="#222"/>
+    <path class="thin" d="M-8,-22.6 V12 M8,-22.6 V12"/>
+  </g>
+  <text class="small mid" x="257" y="232">コンセント</text>
+  <circle cx="150" cy="330" r="7" fill="#222"/>
+  <text x="166" y="335">イ</text>
+  <text class="small" x="166" y="352">スイッチ</text>
+
+  <!-- multi-line diagram: same wiring as step 4 of multi-line-4steps.svg -->
+  <text class="h" x="330" y="30">複線図：色つきの丸 1 つにつき、接続材を 1 個使う</text>
+  <circle class="jb" cx="590" cy="212" r="104"/>
+  <text class="small" x="682" y="318">ジョイントボックス</text>
+  <text class="b" x="338" y="176">L</text>
+  <text class="b" x="338" y="248">N</text>
+
+  <path class="white-edge" d="M356,243 H778 M548,243 V72 H566"/>
+  <path class="white-core" d="M356,243 H778 M548,243 V72 H566"/>
+  <path class="black" d="M356,171 H778 M634,171 V360"/>
+  <path class="white-edge" d="M546,360 V292 H590"/>
+  <path class="white-core" d="M546,360 V292 H590"/>
+  <path class="black" d="M590,292 V92"/>
+
+  <circle class="sym" cx="590" cy="72" r="21"/>
+  <text class="b mid" x="590" y="77">R</text>
+  <text x="620" y="77">ランプ類</text>
+  <circle class="sym" cx="786" cy="171" r="7"/>
+  <circle class="sym" cx="786" cy="243" r="7"/>
+  <text x="752" y="150">コンセント</text>
+  <text class="small" x="799" y="248">W</text>
+  <circle class="sym" cx="546" cy="367" r="7"/>
+  <circle class="sym" cx="634" cy="367" r="7"/>
+  <path d="M553,364 L606,341" stroke="#222" stroke-width="2.5" fill="none"/>
+  <text x="650" y="372">スイッチ</text>
+
+  <circle class="neutral" cx="548" cy="243" r="9"/>
+  <circle class="live" cx="634" cy="171" r="9"/>
+  <circle class="ret" cx="590" cy="292" r="9"/>
+
+  <!-- what each connection point needs -->
+  <circle class="neutral" cx="30" cy="438" r="7"/>
+  <text class="neutral-text" x="44" y="443">N の接続点</text>
+  <text x="24" y="466">白 3 本：電源、ランプ類、コンセント</text>
+  <text class="b" x="24" y="488">小スリーブ、刻印「小」</text>
+
+  <circle class="live" cx="312" cy="438" r="7"/>
+  <text class="live-text" x="326" y="443">L の接続点</text>
+  <text x="306" y="466">黒 3 本：電源、スイッチ、コンセント</text>
+  <text class="b" x="306" y="488">小スリーブ、刻印「小」</text>
+
+  <circle class="ret" cx="594" cy="438" r="7"/>
+  <text class="ret-text" x="608" y="443">帰り線の接続点</text>
+  <text x="588" y="466">2 本：スイッチの白、ランプ類の黒</text>
+  <text class="b" x="588" y="488">小スリーブ、刻印「○」</text>
+
+  <text class="small" x="24" y="516">線はすべて 1.6 mm の場合。色つきの丸が接続で、丸のない交差はつながっていない。白線は灰色の縁取りで表示。</text>
+</svg>

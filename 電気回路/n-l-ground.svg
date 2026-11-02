@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 530" width="880" height="530" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .key { font-weight: 700; fill: #b4231a; }
+    .small { font-size: 12px; fill: #555; }
+    .mid { text-anchor: middle; }
+    .sym { stroke: #222; stroke-width: 2; fill: #fff; }
+    .thin { stroke: #222; stroke-width: 2; fill: none; }
+    .black { stroke: #222; stroke-width: 3; fill: none; }
+    .white-edge { stroke: #7c7c7c; stroke-width: 6; fill: none; }
+    .white-core { stroke: #fff; stroke-width: 3; fill: none; }
+    .green { stroke: #1f8a4c; stroke-width: 3; fill: none; }
+    .green-text { fill: #1f8a4c; font-weight: 700; }
+    .neutral-text { fill: #0b62a4; font-weight: 700; }
+    .axis { stroke: #9aa5b5; stroke-width: 1; stroke-dasharray: 3 3; fill: none; }
+    .earth { stroke: #8a6d3b; stroke-width: 1.5; stroke-dasharray: 8 5; fill: none; }
+    .rule { stroke: #d5dbe3; }
+  </style>
+  <defs>
+    <g id="ground">
+      <path class="thin" d="M-16,0 H16 M-10,7 H10 M-4,14 H4"/>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the wire colors stay readable in any theme -->
+  <rect width="880" height="530" rx="8" fill="#fff"/>
+  <line class="rule" x1="16" y1="342" x2="864" y2="342"/>
+
+  <text class="h" x="20" y="30">N と L と接地線（単相 2 線式 100 V の例）</text>
+
+  <!-- transformer secondary -->
+  <path class="thin" d="M72,110 a14,12.5 0 0 1 0,25 a14,12.5 0 0 1 0,25 a14,12.5 0 0 1 0,25 a14,12.5 0 0 1 0,25"/>
+  <text x="96" y="150">柱上変圧器の</text>
+  <text x="96" y="168">低圧側</text>
+
+  <!-- N: the grounded side -->
+  <path class="thin" d="M72,210 V300"/>
+  <use href="#ground" x="72" y="300"/>
+  <text class="b" x="98" y="306">B 種接地</text>
+  <path class="white-edge" d="M72,230 H670 V195 M240,230 V207 M420,230 V185"/>
+  <path class="white-core" d="M72,230 H670 V195 M240,230 V207 M420,230 V185"/>
+  <circle cx="72" cy="230" r="4.5" fill="#222"/>
+
+  <!-- L: the live side -->
+  <path class="black" d="M72,110 V90 H670 V145 M240,90 V108 M240,152 V173 M420,90 V135"/>
+  <circle cx="240" cy="90" r="4.5" fill="#222"/>
+  <circle cx="420" cy="90" r="4.5" fill="#222"/>
+  <circle cx="240" cy="230" r="4.5" fill="#222"/>
+  <circle cx="420" cy="230" r="4.5" fill="#222"/>
+  <text class="b" x="270" y="78">L（黒）：非接地側。対地電圧 100 V</text>
+  <text class="neutral-text" x="130" y="256">N（白）：接地側。対地電圧ほぼ 0 V。負荷の電流の帰り道</text>
+
+  <!-- switch and lamp -->
+  <circle class="sym" cx="240" cy="112" r="4.5"/>
+  <circle class="sym" cx="240" cy="148" r="4.5"/>
+  <path class="thin" d="M237,145 L221,119"/>
+  <text x="252" y="127">スイッチ</text>
+  <text class="key" x="252" y="145">L 側に入れる</text>
+  <circle class="sym" cx="240" cy="190" r="17"/>
+  <text class="b mid" x="240" y="195">R</text>
+  <text x="264" y="195">ランプ類</text>
+
+  <!-- outlet -->
+  <rect class="sym" x="382" y="135" width="76" height="50"/>
+  <text class="small mid" x="420" y="158">コンセント</text>
+  <text class="small mid" x="420" y="178">W</text>
+
+  <!-- equipment with a metal case -->
+  <rect x="590" y="122" width="160" height="76" rx="3" fill="#e9edf2" stroke="#55606e" stroke-width="2"/>
+  <text class="small" x="598" y="191">金属外箱</text>
+  <rect class="sym" x="642" y="145" width="56" height="30"/>
+  <text class="mid" x="670" y="165">負荷</text>
+  <path class="green" d="M750,160 H800 V300"/>
+  <use href="#ground" x="800" y="300"/>
+  <text class="green-text" x="756" y="148">接地線（緑）</text>
+  <text class="small" x="810" y="210">ふだんは</text>
+  <text class="small" x="810" y="228">電流が</text>
+  <text class="small" x="810" y="246">流れない</text>
+  <text class="b" x="696" y="306">D 種接地など</text>
+
+  <!-- the earth -->
+  <path class="earth" d="M30,324 H850"/>
+  <text class="small mid" x="430" y="316">大地</text>
+
+  <!-- voltage over time -->
+  <text class="h" x="20" y="370">大地を基準にした電圧の変化</text>
+  <path class="axis" d="M90,390 H520 M90,490 H520"/>
+  <text class="small" x="26" y="394">+ 141 V</text>
+  <text class="small" x="26" y="494">− 141 V</text>
+  <text class="small" x="48" y="445">0 V</text>
+  <path class="white-edge" d="M90,440 H520"/>
+  <path class="white-core" d="M90,440 H520"/>
+  <path class="black" d="M90.0,440.0 L92.7,436.1 L95.4,432.2 L98.1,428.3 L100.8,424.5 L103.4,420.9 L106.1,417.3 L108.8,413.9 L111.5,410.6 L114.2,407.5 L116.9,404.6 L119.6,402.0 L122.2,399.5 L124.9,397.4 L127.6,395.4 L130.3,393.8 L133.0,392.4 L135.7,391.4 L138.4,390.6 L141.1,390.2 L143.8,390.0 L146.4,390.2 L149.1,390.6 L151.8,391.4 L154.5,392.4 L157.2,393.8 L159.9,395.4 L162.6,397.4 L165.2,399.5 L167.9,402.0 L170.6,404.6 L173.3,407.5 L176.0,410.6 L178.7,413.9 L181.4,417.3 L184.1,420.9 L186.8,424.5 L189.4,428.3 L192.1,432.2 L194.8,436.1 L197.5,440.0 L200.2,443.9 L202.9,447.8 L205.6,451.7 L208.2,455.5 L210.9,459.1 L213.6,462.7 L216.3,466.1 L219.0,469.4 L221.7,472.5 L224.4,475.4 L227.1,478.0 L229.8,480.5 L232.4,482.6 L235.1,484.6 L237.8,486.2 L240.5,487.6 L243.2,488.6 L245.9,489.4 L248.6,489.8 L251.2,490.0 L253.9,489.8 L256.6,489.4 L259.3,488.6 L262.0,487.6 L264.7,486.2 L267.4,484.6 L270.1,482.6 L272.8,480.5 L275.4,478.0 L278.1,475.4 L280.8,472.5 L283.5,469.4 L286.2,466.1 L288.9,462.7 L291.6,459.1 L294.2,455.5 L296.9,451.7 L299.6,447.8 L302.3,443.9 L305.0,440.0 L307.7,436.1 L310.4,432.2 L313.1,428.3 L315.8,424.5 L318.4,420.9 L321.1,417.3 L323.8,413.9 L326.5,410.6 L329.2,407.5 L331.9,404.6 L334.6,402.0 L337.2,399.5 L339.9,397.4 L342.6,395.4 L345.3,393.8 L348.0,392.4 L350.7,391.4 L353.4,390.6 L356.1,390.2 L358.8,390.0 L361.4,390.2 L364.1,390.6 L366.8,391.4 L369.5,392.4 L372.2,393.8 L374.9,395.4 L377.6,397.4 L380.2,399.5 L382.9,402.0 L385.6,404.6 L388.3,407.5 L391.0,410.6 L393.7,413.9 L396.4,417.3 L399.1,420.9 L401.8,424.5 L404.4,428.3 L407.1,432.2 L409.8,436.1 L412.5,440.0 L415.2,443.9 L417.9,447.8 L420.6,451.7 L423.2,455.5 L425.9,459.1 L428.6,462.7 L431.3,466.1 L434.0,469.4 L436.7,472.5 L439.4,475.4 L442.1,478.0 L444.8,480.5 L447.4,482.6 L450.1,484.6 L452.8,486.2 L455.5,487.6 L458.2,488.6 L460.9,489.4 L463.6,489.8 L466.2,490.0 L468.9,489.8 L471.6,489.4 L474.3,488.6 L477.0,487.6 L479.7,486.2 L482.4,484.6 L485.1,482.6 L487.8,480.5 L490.4,478.0 L493.1,475.4 L495.8,472.5 L498.5,469.4 L501.2,466.1 L503.9,462.7 L506.6,459.1 L509.2,455.5 L511.9,451.7 L514.6,447.8 L517.3,443.9 L520.0,440.0"/>
+  <text class="b" x="546" y="412">L（黒）：+ と − が入れ替わる</text>
+  <text class="small" x="546" y="431">実効値 100 V、最大値は約 141 V</text>
+  <text class="neutral-text" x="546" y="464">N（白）：0 V 付近のまま</text>
+  <text class="small" x="546" y="483">交流なので、決まった + の線はない</text>
+
+  <text class="small" x="20" y="517">図は簡略化したもの。N も接地線も大地につながっているが、電流が流れる線かどうかが違う。</text>
+</svg>
