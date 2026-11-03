@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 170" width="720" height="170" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    .name { font-size: 13px; font-weight: 700; fill: #222; text-anchor: middle; }
+    .sub { font-size: 12px; fill: #666; text-anchor: middle; }
+    .sym { stroke: #222; stroke-width: 2.5; fill: #fff; }
+    .hatch { stroke: #222; stroke-width: 2.2; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+  </style>
+  <rect x="0" y="0" width="720" height="170" fill="#fff"/>
+  <defs>
+    <clipPath id="vvf-clip"><circle cx="90" cy="62" r="28"/></clipPath>
+  </defs>
+
+  <rect class="cell" x="8" y="8" width="164" height="154" rx="6"/>
+  <rect class="cell" x="188" y="8" width="164" height="154" rx="6"/>
+  <rect class="cell" x="368" y="8" width="164" height="154" rx="6"/>
+  <rect class="cell" x="548" y="8" width="164" height="154" rx="6"/>
+
+  <!-- VVF 用ジョイントボックス：斜線の丸 -->
+  <circle class="sym" cx="90" cy="62" r="28"/>
+  <g clip-path="url(#vvf-clip)">
+    <line class="hatch" x1="50" y1="85" x2="130" y2="5"/>
+    <line class="hatch" x1="50" y1="102" x2="130" y2="22"/>
+    <line class="hatch" x1="50" y1="119" x2="130" y2="39"/>
+  </g>
+  <circle cx="90" cy="62" r="28" fill="none" stroke="#222" stroke-width="2.5"/>
+  <text class="name" x="90" y="122">VVF 用ジョイントボックス</text>
+  <text class="sub" x="90" y="142">斜線の丸</text>
+
+  <!-- アウトレットボックス：四角 -->
+  <rect class="sym" x="242" y="34" width="56" height="56"/>
+  <text class="name" x="270" y="122">アウトレットボックス</text>
+  <text class="sub" x="270" y="142">四角（ジョイントボックス）</text>
+
+  <!-- プルボックス：四角にバツ -->
+  <rect class="sym" x="422" y="34" width="56" height="56"/>
+  <line class="hatch" x1="422" y1="34" x2="478" y2="90"/>
+  <line class="hatch" x1="478" y1="34" x2="422" y2="90"/>
+  <text class="name" x="450" y="122">プルボックス</text>
+  <text class="sub" x="450" y="142">四角にバツ</text>
+
+  <!-- ジャンクションボックス：二重丸 -->
+  <circle class="sym" cx="630" cy="62" r="28"/>
+  <circle class="sym" cx="630" cy="62" r="17"/>
+  <text class="name" x="630" y="122">ジャンクションボックス</text>
+  <text class="sub" x="630" y="142">二重丸（ダクト工事用）</text>
+</svg>

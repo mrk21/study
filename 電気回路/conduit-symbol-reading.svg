@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" width="880" height="360" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 15px; font-weight: 700; fill: #1b3a5c; }
+    .b { font-weight: 700; }
+    .small { font-size: 12px; fill: #555; }
+    .mid { text-anchor: middle; }
+    .wire { stroke: #222; stroke-width: 4; fill: none; }
+    .tick { stroke: #222; stroke-width: 2; fill: none; }
+    .lead { stroke: #7c8aa0; stroke-width: 1.2; fill: none; }
+    .where { font-weight: 700; fill: #c7601e; }
+    .what { font-weight: 700; fill: #2563c7; }
+    .sym { font-size: 18px; font-weight: 600; fill: #222; }
+    .sym-what { font-size: 18px; font-weight: 700; fill: #2563c7; }
+  </style>
+
+  <!-- background: fixed so the line patterns stay readable in any theme -->
+  <rect width="880" height="360" rx="8" fill="#fff"/>
+
+  <!-- how to read one symbol -->
+  <text class="h" x="20" y="28">図記号の読み方</text>
+  <line x1="60" y1="96" x2="294" y2="96" class="wire" style="stroke:#c7601e" stroke-dasharray="9 6"/>
+  <path class="tick" d="M172,106 L184,86 M182,106 L194,86 M192,106 L204,86"/>
+  <text class="sym" x="104" y="134">IV1.6</text>
+  <text class="sym-what" x="162" y="134">（E19）</text>
+
+  <path class="lead" d="M90,90 V66"/>
+  <text class="where" x="30" y="60">① 線：どこを通すか</text>
+  <path class="lead" d="M200,84 L222,66"/>
+  <text class="small" x="212" y="60">電線の本数 ※</text>
+  <path class="lead" d="M125,140 V162"/>
+  <text class="small" x="30" y="178">電線の種類と太さ</text>
+  <path class="lead" d="M205,140 V162"/>
+  <text class="what" x="150" y="178">② 括弧：何の管か</text>
+
+  <!-- the two checks -->
+  <rect x="330" y="46" width="530" height="146" rx="8" fill="#f6f8fb" stroke="#d5dbe3"/>
+  <text class="b" x="346" y="72">選ぶときは、この 2 つが問題文と合うかを別々に確かめる</text>
+  <text class="where" x="346" y="102">① 線</text>
+  <text x="392" y="102">天井隠ぺい、床隠ぺい、露出のどれか</text>
+  <text class="what" x="346" y="130">② 括弧</text>
+  <text x="392" y="130">厚鋼、ねじなし、合成樹脂製可とう、2 種金属製可とうのどれか</text>
+  <text class="small" x="346" y="162">両方合う選択肢が「正しいもの」。片方でも違えば「誤っているもの」。</text>
+  <text class="small" x="346" y="180">電線の種類と本数は、選択肢でそろっていれば見なくてよい。</text>
+
+  <line x1="12" y1="212" x2="868" y2="212" stroke="#e3e7ec"/>
+
+  <!-- line types -->
+  <text class="h" x="20" y="240">線の種類（試験の図の見た目に合わせて描いた）</text>
+  <line x1="40" y1="276" x2="190" y2="276" class="wire"/>
+  <text class="b mid" x="115" y="304">天井隠ぺい配線</text>
+  <text class="small mid" x="115" y="322">実線</text>
+  <line x1="258" y1="276" x2="392" y2="276" class="wire" stroke-dasharray="26 10"/>
+  <text class="b mid" x="325" y="304">床隠ぺい配線</text>
+  <text class="small mid" x="325" y="322">長い破線</text>
+  <line x1="456" y1="276" x2="615" y2="276" class="wire" stroke-dasharray="9 6"/>
+  <text class="b mid" x="535" y="304">露出配線</text>
+  <text class="small mid" x="535" y="322">短い破線（点線）</text>
+  <line x1="666" y1="276" x2="824" y2="276" class="wire" stroke-dasharray="26 7 4 7"/>
+  <text class="b mid" x="745" y="304">地中埋設配線</text>
+  <text class="small mid" x="745" y="322">一点鎖線</text>
+  <text class="small" x="20" y="348">線の太さは強調してある。図記号の例は R5 下 午前 問 21 イを描き直したもの。※ は「確認状況」を参照。</text>
+</svg>
