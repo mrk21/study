@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 325" width="920" height="325" font-family="-apple-system, system-ui, 'Segoe UI', 'Yu Gothic UI', 'Noto Sans CJK JP', sans-serif">
+  <style>
+    text { font-size: 13px; font-weight: 500; fill: #333; }
+    .h { font-size: 14px; font-weight: 700; fill: #1b3a5c; text-anchor: middle; }
+    .sub { font-size: 12px; fill: #555; text-anchor: middle; }
+    .cap { font-size: 12px; fill: #333; text-anchor: middle; }
+    .lab { font-size: 12px; font-weight: 700; fill: #333; }
+    .lead { stroke: #555; stroke-width: 1.2; fill: none; }
+    .sheath { fill: #c3c8cf; stroke: #6b7280; stroke-width: 1.5; }
+    .thick { fill: #565c66; stroke: #222; stroke-width: 1.5; }
+    .filler { fill: #e6d6b5; stroke: #b59f74; stroke-width: 1; }
+    .ink { stroke: #222; stroke-width: 1.5; }
+    .blk { fill: #2a2a2a; }
+    .wht { fill: #fbfaf5; }
+    .red { fill: #d6312b; }
+    .cu { fill: #c77b30; }
+  </style>
+  <defs>
+    <g id="strands">
+      <circle class="cu" r="3"/>
+      <circle class="cu" cx="6" r="3"/><circle class="cu" cx="-6" r="3"/>
+      <circle class="cu" cx="3" cy="5.2" r="3"/><circle class="cu" cx="-3" cy="5.2" r="3"/>
+      <circle class="cu" cx="3" cy="-5.2" r="3"/><circle class="cu" cx="-3" cy="-5.2" r="3"/>
+    </g>
+  </defs>
+
+  <!-- background: fixed so the colors stay readable in any theme -->
+  <rect width="920" height="325" rx="8" fill="#fff"/>
+  <path d="M184,14 V270 M368,14 V270 M552,14 V270 M736,14 V270" stroke="#e3e7ec"/>
+
+  <!-- insulated wire -->
+  <text class="h" x="92" y="28">絶縁電線</text>
+  <text class="sub" x="92" y="46">IV、HIV、OW、DV など</text>
+  <circle class="wht ink" cx="82" cy="130" r="32"/>
+  <circle class="cu" cx="82" cy="130" r="15"/>
+  <path class="lead" d="M88,122 L132,92 M104,152 L132,172"/>
+  <text class="lab" x="134" y="96">導体</text>
+  <text class="lab" x="134" y="178">絶縁体</text>
+  <text class="cap" x="92" y="220">導体を絶縁体で包んだだけ。</text>
+  <text class="cap" x="92" y="240">シースがない。</text>
+
+  <!-- flat cable -->
+  <text class="h" x="276" y="28">平形ケーブル</text>
+  <text class="sub" x="276" y="46">VVF、EM-EEF</text>
+  <rect class="sheath" x="202" y="96" width="148" height="68" rx="16"/>
+  <circle class="blk" cx="245" cy="130" r="25"/>
+  <circle class="cu" cx="245" cy="130" r="12"/>
+  <circle class="wht ink" cx="307" cy="130" r="25"/>
+  <circle class="cu" cx="307" cy="130" r="12"/>
+  <path class="lead" d="M276,100 V82"/>
+  <text class="lab" x="276" y="76" text-anchor="middle">シース</text>
+  <text class="cap" x="276" y="220">絶縁電線をシースで</text>
+  <text class="cap" x="276" y="240">平たく包む。</text>
+
+  <!-- round cable -->
+  <text class="h" x="460" y="28">丸形ケーブル</text>
+  <text class="sub" x="460" y="46">VVR、CV、EM-CE</text>
+  <circle class="sheath" cx="460" cy="130" r="60"/>
+  <circle class="filler" cx="460" cy="130" r="50"/>
+  <circle class="blk" cx="436" cy="130" r="23"/>
+  <circle class="cu" cx="436" cy="130" r="11"/>
+  <circle class="wht ink" cx="484" cy="130" r="23"/>
+  <circle class="cu" cx="484" cy="130" r="11"/>
+  <path class="lead" d="M460,168 V200"/>
+  <text class="lab" x="466" y="203">介在物</text>
+  <text class="cap" x="460" y="220" dy="4">丸く包む。</text>
+  <text class="cap" x="460" y="240" dy="4">すき間を介在物で埋める。</text>
+
+  <!-- cord -->
+  <text class="h" x="644" y="28">コード</text>
+  <text class="sub" x="644" y="46">ビニル平形コードなど</text>
+  <rect class="wht ink" x="594" y="104" width="100" height="52" rx="26"/>
+  <use href="#strands" x="620" y="130"/>
+  <use href="#strands" x="668" y="130"/>
+  <path class="lead" d="M668,124 L700,92"/>
+  <text class="lab" x="654" y="88">細い線の束</text>
+  <text class="cap" x="644" y="220">細い線の束なので柔らかい。</text>
+  <text class="cap" x="644" y="240">器具の電源線などに使う。</text>
+
+  <!-- cabtyre cable -->
+  <text class="h" x="828" y="28">キャブタイヤケーブル</text>
+  <text class="sub" x="828" y="46">2 種キャブタイヤなど</text>
+  <circle class="thick" cx="828" cy="130" r="60"/>
+  <circle class="blk" cx="828" cy="103" r="21" stroke="#eee" stroke-width="1"/>
+  <use href="#strands" x="828" y="103"/>
+  <circle class="wht ink" cx="804" cy="146" r="21"/>
+  <use href="#strands" x="804" y="146"/>
+  <circle class="red ink" cx="852" cy="146" r="21"/>
+  <use href="#strands" x="852" y="146"/>
+  <text class="cap" x="828" y="220" dy="4">細い線の束を厚いシースで</text>
+  <text class="cap" x="828" y="240" dy="4">包む。移動する機器に使う。</text>
+
+  <text class="sub" x="460" y="298">模式図で、太さの比率や素線の数は実物と違う。線の色は例。心線の数は 2 本または 3 本で描いた。</text>
+</svg>
